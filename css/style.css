@@ -8,6 +8,10 @@
 .nohabg{
     background-color: #e76800;  
 }
+.nohabtn{
+    background-color: #0b6f27; 
+    color: #EEEEEE; 
+}
 .push-right {
     padding-left: 60px;
     width: 50%; /* Ajustez cette valeur selon vos besoins */
