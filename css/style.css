@@ -3,9 +3,18 @@
     --primary: #e76800;
     --light: #EFF5FF;
     --dark: #1B2C51;
+ 
 }
 .nohabg{
     background-color: #e76800;  
+}
+.push-right {
+    padding-left: 60px;
+    width: 50%; /* Ajustez cette valeur selon vos besoins */
+}
+
+.nohabg2{
+    background-color: #0d680a;  
 }
 
 .nohatc{
@@ -241,7 +250,7 @@
 }
 
 .page-header {
-    background: url(../img/header-page.jpg) top center no-repeat;
+    background: url(../img/alignée.jpeg) top center no-repeat;
     background-size: cover;
     text-shadow: 0 0 30px rgba(0, 0, 0, .1);
 }
@@ -309,9 +318,17 @@
     transition: .5s;
 }
 
+
+.team-item img .frefre2{
+    position: relative;
+    top: 0;
+    transition: .5s;
+    width: 100px;
+}
 .team-item:hover img {
     top: -30px;
 }
+
 
 .team-item .team-text {
     position: relative;
