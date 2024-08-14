@@ -3,4 +3,4 @@
 *.png
 
 # Ignorer les dossiers spécifiques
-images/
+/img/assurances
