@@ -37,6 +37,10 @@
 
 <body>
 
+
+
+    
+
     <!-- Spinner Start -->
     <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow nohatc" style="width: 3rem; height: 3rem;" role="status">
@@ -88,8 +92,8 @@
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">FAQ</a>
                     <div class="dropdown-menu rounded-0 rounded-bottom m-0">
                         <a href="feature.html" class="dropdown-item">Tarification</a>
-                        <a href="feature.html" class="dropdown-item">Assurance</a>
-                        <a href="feature.html" class="dropdown-item">Parcourt</a>
+                        <a href="assurance.html" class="dropdown-item">Assurance</a>
+                        <a href="parcour.html" class="dropdown-item">Parcourt</a>
                         
                     </div>
                 </div>
@@ -262,134 +266,112 @@
 
 
 
-<style>
-    
-body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
-}
+    <style>
+        .org-chart {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #343a40;
-}
+        .org-chart .level {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
 
-/* Styles pour les étapes du processus */
-.process {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        .org-chart .level .person {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            margin: 0 10px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
 
-.step {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    width: 80%;
-    max-width: 800px;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.step-icon {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #007bff;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-right: 20px;
-}
-
-.step-content {
-    flex: 1;
-}
-
-.step-content h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #007bff;
-}
-
-.step-content p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Styles pour le header et footer */
-.header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer {
-    background-color: #343a40;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer p {
-    margin: 0;
-}
-
+        .org-chart .connector {
+            width: 2px;
+            height: 30px;
+            background-color: #007bff;
+            margin: 0 auto;
+        }
     </style>
+
+<div>
+    <br>
+     <div class="org-chart">
+      <div><img src="/img/assurances/fpm.jpeg" alt="" srcset=""> <h3>Patient Assuré FPM</h3></div>
    
-</head>
-
-<body>
-
-    <div class="container">
-        <div class="category">
-            <h2>Patients Assurés FPM</h2>
-            <ul class="steps">
-                <li data-step="1">Etre Reçu pa un Medecin</li>
-                <li data-step="2">Recevoir son N de Dossier et la facturation </li>
-                <li data-step="3">recevoir sa prise en charge</li>
-                <li data-step="4">Ticket de consultation</li>
-                <li data-step="5">Règlement par l'assurance et départ du patient</li>
-            </ul>
+        <div class="level">
+            <div class="person">Se Rendre a l'Acceuil</div>
         </div>
-
-        <div class="category">
-            <h2>Patients avec Autres Assurance</h2>
-            <ul class="steps">
-                <li data-step="1">Inscription à l'accueil avec présentation de l'assurance</li>
-                <li data-step="2">Vérification de l'éligibilité avec l'assurance</li>
-                <li data-step="3">Consultation avec le médecin</li>
-                <li data-step="4">Examen médical et prise en charge partielle par l'assurance</li>
-                <li data-step="5">Règlement des frais restants et départ du patient</li>
-            </ul>
+        <div class="connector"></div>
+        <div class="level">
+            <div class="person">Voir le medecin</div> >
+            <div class="person"> Recuperer sa Prise en Charge FPM</div> >
+            <div class="person">Se Rendre a la Caisse</div> >
         </div>
-
-        <div class="category">
-            <h2>Patients Non Assurés</h2>
-            <ul class="steps">
-                <li data-step="1">Inscription à l'accueil et création du dossier</li>
-                <li data-step="2">Consultation avec le médecin</li>
-                <li data-step="3">Prise en charge des examens nécessaires</li>
-                <li data-step="4">Règlement des frais médicaux par le patient</li>
-                <li data-step="5">Départ du patient après paiement complet</li>
-            </ul>
+        <div class="connector"></div>
+        <div class="level">
+            <div class="person">Revenir au Medecin</div> >
+            <div class="person">Prendre les Prescription</div> >
+            <div class="person">Prendre un RDV</div> >
         </div>
     </div>
 
 
 
 
+<br><hr>
+    <div class="org-chart">
+        <div><img src="/img/assurances/fpm.jpeg" alt="" srcset=""> <h3>Patient Assuré FPM</h3></div>
+     
+          <div class="level">
+              <div class="person">Se Rendre a l'Acceuil</div>
+          </div>
+          <div class="connector"></div>
+          <div class="level">
+              <div class="person">Voir le medecin</div> >
+              <div class="person"> Recuperer sa Prise en Charge FPM</div> >
+              <div class="person">Se Rendre a la Caisse</div> >
+          </div>
+          <div class="connector"></div>
+          <div class="level">
+              <div class="person">Revenir au Medecin</div> >
+              <div class="person">Prendre les Prescription</div> >
+              <div class="person">Prendre un RDV</div> >
+          </div>
+      </div>
+
+
+   
+   
+
+
+
+<br> <hr>
+    <div class="org-chart">
+        <div><img src="/img/assurances/fpm.jpeg" alt="" srcset=""> <h3>Patient Assuré FPM</h3></div>
+   
+        <div class="level">
+            <div class="person">Se Rendre a l'Acceuil</div>
+        </div>
+        <div class="connector"></div>
+        <div class="level">
+            <div class="person">Voir le medecin</div> >
+            <div class="person"> Recuperer sa Prise en Charge FPM</div> >
+            <div class="person">Se Rendre a la Caisse</div> >
+        </div>
+        <div class="connector"></div>
+        <div class="level">
+            <div class="person">Revenir au Medecin</div> >
+            <div class="person">Prendre les Prescription</div> >
+            <div class="person">Prendre un RDV</div> >
+        </div>
+    </div>
+    
+</div>
 
 
 
