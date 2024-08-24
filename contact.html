@@ -31,13 +31,22 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+    <style>
+        
+        #map {
+
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+
     <!-- Spinner Start -->
     <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow nohatc" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div> -->
-    <!-- Spinner End -->À
+    <!-- Spinner End -->
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
@@ -148,5 +157,39 @@
         </div>
     </div>
     <!-- Contact End -->
+
+
+
+    <h3>Ma Carte Google Maps</h3>
+    <!-- Div où la carte sera affichée -->
+    <div id="map"></div>
+
+    <!-- Script pour charger la carte -->
+    <script>
+        function initMap() {
+            // Coordonnées de la localisation (latitude, longitude)
+            var location = {lat: 5.353, lng: -3.978};
+
+            // Initialisation de la carte
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+
+            // Marqueur sur la localisation
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    
+    <!-- API Google Maps avec la clé -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+
+
+
 </body>
 </html>
