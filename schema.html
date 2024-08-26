@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processus Patient</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .process-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            height: 20%;
+        }
+
+        .process-step {
+            position: relative;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            width: 100%;
+        }
+
+        .step-content {
+            background-color: #e0f7fa;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-content h2 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 20px solid #00796b;
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            transform: translateY(-50%);
+        }
+
+        .process-step:last-child .arrow {
+            display: none;
+        }
+
+        .branch {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .branch .process-step {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="process-container">
+        <div class="process-step">
+            <div class="step-content">
+                <h2>Admission</h2>
+                <p>Le patient est admis à l'hôpital.</p>
+            </div>
+            <div class="arrow"></div>
+        </div>
+
+        <div class="process-step">
+            <div class="step-content">
+                <h2>Consultation</h2>
+                <p>Le patient consulte un médecin.</p>
+            </div>
+            <div class="arrow"></div>
+        </div>
+
+        <div class="branch">
+            <div class="process-step">
+                <div class="step-content">
+                    <h2>Assuré FPM</h2>
+                    <p>Le patient bénéficie de la couverture FPM.</p>
+                </div>
+                <div class="arrow"></div>
+            </div>
+            <div class="process-step">
+                <div class="step-content">
+                    <h2>Autre Assurance</h2>
+                    <p>Le patient est couvert par une autre assurance.</p>
+                </div>
+                <div class="arrow"></div>
+            </div>
+            <div class="process-step">
+                <div class="step-content">
+                    <h2>Non Assuré</h2>
+                    <p>Le patient prend en charge ses frais de traitement.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-step">
+            <div class="step-content">
+                <h2>Traitement</h2>
+                <p>Le patient reçoit un traitement.</p>
+            </div>
+            <div class="arrow"></div>
+        </div>
+
+        <div class="process-step">
+            <div class="step-content">
+                <h2>Sortie</h2>
+                <p>Le patient quitte l'hôpital.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
