@@ -2,74 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>HMA - Hôpital Militaire D'Abidjan</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifs des Examens de Routine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-
+    
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
         .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
-            width: 100%;
-            margin: auto;
-            flex: 1;
-        }
-
-        h1 {
-            text-align: center;
-            color: #4cb822;
-            margin-bottom: 30px;
+            margin-top: 20px;
         }
 
         .search-bar {
             margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .search-bar input {
-            padding: 10px;
-            width: 80%;
-            border: 1px solid #ddd;
-            border-radius: 5px;
         }
 
         table {
@@ -78,370 +24,279 @@
             margin-bottom: 20px;
         }
 
-        table,
         th,
         td {
             border: 1px solid #ddd;
-        }
-
-        th,
-        td {
-            padding: 12px;
+            padding: 8px;
             text-align: left;
         }
 
         th {
-            background-color: #4cb822;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: #f4f4f4;
         }
 
         .price {
-            font-weight: bold;
-            color: #ff6600;
+            text-align: right;
         }
 
-        .pagination,
         .navigation {
-            display: flex;
-            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .total-container {
             margin-top: 20px;
+            margin-bottom: 20px;
         }
 
-        .pagination button,
-        .navigation button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #4cb822;
-            color: white;
-            cursor: pointer;
+        .selected-exams {
+            margin-bottom: 20px;
         }
 
-        .pagination button:disabled,
-        .navigation button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
+        .btn-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
         }
 
-        /* Footer styles */
-        .footer {
-            background-color: #343a40;
-            color: #fff;
-        }
-
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .footer .btn-social {
+        .btn-container button {
             margin-right: 10px;
         }
 
-        .nohabtn {
-            background-color: #4cb822;
-            color: #fff;
+        .total-container h3 {
+            margin: 0;
         }
 
-        .nohabtn:hover {
-            background-color: #3a9a1f;
+        .selected-exams ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .selected-exams li {
+            margin-bottom: 5px;
+        }
+
+        .selected-exams button {
+            margin-left: 10px;
+        }
+
+        .section-links {
+            margin-bottom: 20px;
+        }
+
+        .section-links a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .section-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Spinner Start -->
-    <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow nohatc" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div> -->
-    <!-- Spinner End -->
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt nohatc me-2"></small>
-                    <small>+225 Abidjan Côte d'Ivoire</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock nohatc me-2"></small>
-                    <small>Lundi - Dimanche : 24h/24</small>
-                </div>
+ <!-- Topbar Start -->
+ <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-map-marker-alt me-2"></small>
+                <small>+225 Abidjan, Côte d'Ivoire</small>
             </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt nohatc me-2"></small>
-                    <small>+225 07 58 07 53 26</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                </div>
+            <div class="h-100 d-inline-flex align-items-center py-3">
+                <small class="far fa-clock me-2"></small>
+                <small>Lundi-Dimanche : 24h/24</small>
+            </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-phone-alt me-2"></small>
+                <small>+225 07 58 07 53 26</small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center">
+                <a class="btn btn-sm-square rounded-circle bg-white me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-sm-square rounded-circle bg-white me-1" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-sm-square rounded-circle bg-white me-1" href=""><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
+</div>
+<!-- Topbar End -->
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h1 class="m-0 nohatc"><img src="./img/HMA1.png" alt="" srcset="" class="img-thumbnail" style="width: 201px; height: 76px;"></h1>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link ">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active " data-bs-toggle="dropdown" >FAQ</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="feature.html" class="dropdown-item ">Tarification</a>
-                        <a href="team.html" class="dropdown-item">Assurance</a>
-                        <a href="parcour.html" class="dropdown-item">Parcourt</a>
-                        
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h1 class="m-0"><i class="far fa-hospital me-3"></i>HMA</h1>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link">Accueil</a>
+            <a href="service.html" class="nav-item nav-link">Services</a>
+            <a href="feature.html" class="nav-item nav-link">Tarifications</a>
+            <a href="team.html" class="nav-item nav-link">Assurances</a>
+            <a href="parcour.html" class="nav-item nav-link">Parcours</a>
+            <a href="contact.html" class="nav-item nav-link active">Contact</a>
         </div>
-    </nav>
-    <!-- Navbar End -->
+    </div>
+</nav>
+<!-- Navbar End -->
 
-    <!-- Main Content Start -->
-     <br>
-    <div class="container" data-wow-delay="0.1s">
+
+    <div class="container">
         <h1>Tarifs des Examens de Routine</h1>
-      
+
         <div class="search-bar">
-            <input type="text" id="search" placeholder="Rechercher un examen...">
+            <input type="text" id="search" class="form-control" placeholder="Rechercher un examen...">
         </div>
-        <div class="navigation">
-            <button id="prev-section-btn" disabled>Précédent</button>
-            <button id="next-section-btn">Suivant</button>
+
+        <div class="section-links">
+            <a href="#laboratoire" id="link-laboratoire">Laboratoire</a>
+            <a href="#imagerie-medicale" id="link-imagerie-medicale">Imagerie Médicale</a>
+            <a href="#consultations" id="link-consultations">Consultations</a>
         </div>
+
+        <div class="selected-exams" id="selected-exams">
+            <h3>Examens Sélectionnés</h3>
+            <ul id="selected-exams-list"></ul>
+        </div>
+
+        <div class="total-container">
+            <h3 id="total-amount">Total : 0 FCFA</h3>
+        </div>
+
         <div id="section-container">
             <!-- Sections dynamiques seront insérées ici -->
         </div>
-
-       
-        <br><br><br>
     </div>
-
-    <!-- Main Content End -->
-    <br><br><br>
-  
-
-    <!-- JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 
     <script>
         const sections = [
-        {
-    name: 'Laboratoire',
-    exams: [
-        { name: 'Urée', description: 'Mesure du niveau d\'urée dans le sang.', price: 1000 },
-        { name: 'Glycémie', description: 'Mesure du taux de glucose dans le sang.', price: 1500 },
-        { name: 'Créatinine', description: 'Mesure de la créatinine dans le sang pour évaluer la fonction rénale.', price: 2500 },
-        { name: 'Bilirubine', description: 'Analyse des niveaux de bilirubine dans le sang.', price: 2000 },
-        { name: 'ASAT', description: 'Analyse des niveaux d\'aspartate aminotransférase (ASAT) pour évaluer la fonction hépatique.', price: 3000 },
-        { name: 'ALAT', description: 'Analyse des niveaux d\'alanine aminotransférase (ALAT) pour évaluer la fonction hépatique.', price: 3000 },
-        { name: 'Phosphatase Alcaline', description: 'Mesure des niveaux de phosphatase alcaline pour évaluer la santé osseuse.', price: 3000 },
-        { name: 'Protéinémie', description: 'Mesure du taux de protéines dans le sang.', price: 3000 },
-        { name: 'Cholestérol Total', description: 'Mesure du niveau de cholestérol total dans le sang.', price: 3000 },
-        { name: 'Chol LDL', description: 'Mesure du taux de cholestérol LDL dans le sang.', price: 4000 },
-        { name: 'Chol HDL', description: 'Mesure du taux de cholestérol HDL dans le sang.', price: 4000 },
-        { name: 'Triglycérides', description: 'Évaluation des niveaux de triglycérides dans le sang.', price: 3000 },
-        { name: 'Acide Urique', description: 'Mesure du niveau d\'acide urique dans le sang.', price: 2000 },
-        { name: 'Gamma GT', description: 'Mesure de l\'enzyme Gamma-glutamyltransférase (Gamma GT) dans le sang.', price: 2500 },
-        { name: 'Transaminases', description: 'Analyse des niveaux de transaminases pour évaluer la fonction hépatique.', price: 4500 },
-        { name: 'Protéinurie 24H', description: 'Détection de protéines dans l\'urine sur 24 heures.', price: 2000 },
-        { name: 'Glycosurie', description: 'Présence de glucose dans l\'urine.', price: 1000 },
-        { name: 'Créatinine Urinaire', description: 'Mesure de la créatinine dans l\'urine.', price: 2000 },
-        { name: 'Ac Anti HVC', description: 'Test d\'anticorps contre l\'hépatite C.', price: 8000 },
-        { name: 'Ac HBs', description: 'Test d\'anticorps contre l\'hépatite B.', price: 5000 },
-        { name: 'Ac Anti HIV total', description: 'Test d\'anticorps contre le VIH.', price: 8000 },
-        { name: 'Widal & Félix', description: 'Test de dépistage des bactéries responsables de la fièvre typhoïde.', price: 5000 },
-        { name: 'TPHA-VDRL', description: 'Test de dépistage de la syphilis.', price: 4000 },
-        { name: 'Sérologie VIH', description: 'Test de dépistage du VIH.', price: 3000 },
-        { name: 'Facteur Rhumatoïde', description: 'Test de dépistage du facteur rhumatoïde, indicateur de polyarthrite rhumatoïde.', price: 6000 },
-        { name: 'Séro Toxoplasmose', description: 'Test de dépistage de la toxoplasmose.', price: 6000 },
-        { name: 'Séro Rubéole', description: 'Test de dépistage de la rubéole.', price: 5000 },
-        { name: 'ASLO', description: 'Détection des anticorps anti-streptolysine O.', price: 4000 },
-        { name: 'Hémogramme', description: 'Analyse complète du sang.', price: 3000 },
-        { name: 'Groupe ABO/RH', description: 'Détermination du groupe sanguin et du facteur Rh.', price: 3000 },
-        { name: 'TP', description: 'Temps de Prothrombine, mesure de la coagulation du sang.', price: 3000 },
-        { name: 'TCA', description: 'Temps de Céphaline Activée, évaluation de la coagulation du sang.', price: 3000 },
-        { name: 'Électrophorèse Hb', description: 'Analyse des hémoglobines pour détecter les anomalies.', price: 8000 },
-        { name: 'Fibrinémie', description: 'Mesure des niveaux de fibrinogène dans le sang.', price: 5000 },
-        { name: 'CRP', description: 'Mesure de la protéine C-réactive pour évaluer l\'inflammation.', price: 5000 },
-        { name: 'VS', description: 'Vitesse de sédimentation des globules rouges, indicateur d\'inflammation.', price: 3000 },
-        { name: 'Protidogramme', description: 'Analyse des protéines dans le sang.', price: 7000 },
-        { name: 'EPS (KOF)', description: 'Examen parasitologique des selles.', price: 3500 },
-        { name: 'Coproculture', description: 'Culture de selles pour identifier les infections.', price: 3500 },
-        { name: 'ECBU', description: 'Examen cytobactériologique des urines.', price: 3500 },
-        { name: 'ECBU+ATB', description: 'Examen cytobactériologique des urines avec antibiogramme.', price: 12000 },
-        { name: 'ECBL LCR', description: 'Examen cytobactériologique du liquide céphalorachidien.', price: 12000 },
-        { name: 'ECBU PU/ PV', description: 'Analyse des urines pour la détection des protéines urinaires/pyurie.', price: 7000 },
-        { name: 'Spermogramme', description: 'Analyse de la qualité et de la quantité des spermatozoïdes.', price: 7000 },
-        { name: 'Phosph Acides', description: 'Analyse des niveaux de phosphatases acides.', price: 3500 },
-        { name: 'BETA HCG', description: 'Test de grossesse par détection de la beta-hCG.', price: 10000 },
-        { name: 'PSA', description: 'Dosage de l\'antigène prostatique spécifique (PSA) pour évaluer la santé de la prostate.', price: 20000 },
-        { name: 'ALPHAFOETOP', description: 'Test de détection de l\'alpha-foetoprotéine pour dépister certains cancers.', price: 20000 },
-        { name: 'ACE', description: 'Antigène carcinoembryonnaire, marqueur tumoral utilisé dans le dépistage de certains cancers.', price: 20000 },
-        { name: 'FSH', description: 'Hormone folliculo-stimulante, évaluation de la fonction reproductive.', price: 8000 },
-        { name: 'LH', description: 'Hormone lutéinisante, évaluation de la fonction reproductive.', price: 8000 },
-        { name: 'LDH', description: 'Lactate déshydrogénase, enzyme impliquée dans les processus énergétiques.', price: 8000 },
-        { name: 'TSH us', description: 'Test de l\'hormone thyréotrope ultra-sensible pour évaluer la fonction thyroïdienne.', price: 20000 },
-        { name: 'T3', description: 'Dosage de la triiodothyronine pour évaluer la fonction thyroïdienne.', price: 20000 },
-        { name: 'T4', description: 'Dosage de la thyroxine pour évaluer la fonction thyroïdienne.', price: 20000 }
-    ]
-
-
+            {
+                name: 'Laboratoire',
+                id: 'laboratoire',
+                exams: [
+                    { name: 'Examen Sanguin', description: 'Analyse de sang', price: 10000 },
+                    { name: 'Examen Urinaire', description: 'Analyse d’urine', price: 8000 }
+                ]
             },
             {
-                name: 'Radiologie',
+                name: 'Imagerie Médicale',
+                id: 'imagerie-medicale',
                 exams: [
-    { name: 'Cran 3F', description: 'Radiographie standard du crâne en trois incidences.', price: 3500 },
-    { name: 'Thorax normal', description: 'Radiographie standard du thorax.', price: 2000 },
-    { name: 'Thorax + Face', description: 'Radiographie thoracique avec incidences complémentaires.', price: 4000 },
-    { name: 'Cavum', description: 'Radiographie des cavités nasales.', price: 3500 },
-    { name: 'Face/Pieds', description: 'Radiographie des pieds, face.', price: 2000 },
-    { name: 'Main et poignet B & G', description: 'Radiographie des mains et des poignets, bilatérale.', price: 5000 },
-    { name: 'Massif facial 3F', description: 'Radiographie du massif facial, en trois incidences.', price: 5000 },
-    { name: 'Ceinture scapulaire B & G (2F)', description: 'Radiographie de la ceinture scapulaire bilatérale.', price: 5000 },
-    { name: 'Rachis cervico-thoracique (RTH) (C7-D1)', description: 'Radiographie du rachis cervico-thoracique.', price: 7000 },
-    { name: 'Rachis dorso-lombaire + Face-Philocrom', description: 'Radiographie du rachis dorso-lombaire.', price: 10000 },
-    { name: 'Bassin face', description: 'Radiographie du bassin, incidence de face.', price: 7000 },
-    { name: 'Bassin face + Hanches', description: 'Radiographie du bassin avec incidences des hanches.', price: 10000 },
-    { name: 'Epaule droite', description: 'Radiographie de l\'épaule droite.', price: 3500 },
-    { name: 'Genou droit + Jambe', description: 'Radiographie du genou droit et de la jambe.', price: 5000 },
-    { name: 'Avant-bras B & G', description: 'Radiographie des avant-bras, bilatérale.', price: 5000 },
-    { name: 'Poignet B & G', description: 'Radiographie des poignets, bilatérale.', price: 5000 },
-    { name: 'Thorax face', description: 'Radiographie thoracique, incidence de face.', price: 2000 },
-    { name: 'Rachis lombaire (face et profil)', description: 'Radiographie du rachis lombaire, incidences de face et de profil.', price: 5000 },
-    { name: 'Hanche gauche, incl. profil de Lequesne', description: 'Radiographie de la hanche gauche avec profil spécial.', price: 10000 },
-    { name: 'Genou face + profil', description: 'Radiographie du genou, incidences de face et de profil.', price: 5000 },
-    { name: 'Bassin face + cuisse gauche', description: 'Radiographie du bassin avec cuisse gauche.', price: 5000 },
-    { name: 'Cuisse B & G', description: 'Radiographie des cuisses, bilatérale.', price: 5000 },
-    { name: 'Rachis lombaire + coccyx', description: 'Radiographie du rachis lombaire et du coccyx.', price: 8000 },
-    { name: 'Face épaule droite', description: 'Radiographie de l\'épaule droite, incidence de face.', price: 3500 },
-    { name: 'Genou face et profil', description: 'Radiographie du genou, incidences de face et de profil.', price: 5000 },
-    { name: 'Poignet droit + main gauche', description: 'Radiographie du poignet droit et de la main gauche.', price: 5000 },
-    { name: 'Genou B & G', description: 'Radiographie des deux genoux.', price: 5000 },
-    { name: 'Rachis cervical (3F)', description: 'Radiographie du rachis cervical, trois incidences.', price: 7000 },
-    { name: 'Rachis lombaire (3F)', description: 'Radiographie du rachis lombaire, trois incidences.', price: 8000 },
-    { name: 'Rachis lombaire profil et face (3F)', description: 'Radiographie du rachis lombaire, profil et face.', price: 8000 }
-]
-
+                    { name: 'Radiographie', description: 'Imagerie des os', price: 20000 },
+                    { name: 'Échographie', description: 'Imagerie des organes', price: 25000 }
+                ]
             },
             {
                 name: 'Consultations',
+                id: 'consultations',
                 exams: [
-                { name: 'Consultation Générale', description: 'Évaluation générale de la santé par un médecin.', price: 5000 },
-            { name: 'Consultation Spécialiste', description: 'Consultation avec un spécialiste en fonction des besoins du patient.', price: 5000 },
-            { name: 'Examen Ophtalmologique', description: 'Évaluation de la santé des yeux et de la vision.', price: 5000 },
-            { name: 'Consultation Cardiologique', description: 'Évaluation de la santé cardiaque par un cardiologue.', price: 5000 },
-            { name: 'Consultation Endocrinologique', description: 'Évaluation des glandes endocrines.', price: 5000 },
-            { name: 'Consultation Dermatologique', description: 'Évaluation des problèmes de peau.', price: 5000 },
-            { name: 'Consultation Pédiatrique', description: 'Évaluation de la santé des enfants.', price: 5000 },
-            { name: 'Consultation Gynécologique', description: 'Évaluation de la santé gynécologique.', price: 5000 },
-            { name: 'Consultation Urologique', description: 'Évaluation des problèmes urologiques.', price: 5000 },
-            { name: 'Consultation Neurologique', description: 'Évaluation de la santé neurologique.', price: 26000 },
-            { name: 'Consultation Psychiatrie', description: 'Évaluation de la santé mentale et émotionnelle.', price: 5000 },
-            { name: 'Consultation Rhumatologique', description: 'Évaluation des troubles musculo-squelettiques.', price: 5000 },
-            { name: 'Consultation Nutritionnelle', description: 'Évaluation et conseils sur la nutrition.', price: 5000 },
-            { name: 'Consultation Chirurgicale', description: 'Évaluation des besoins chirurgicaux.', price: 5000 },
-            { name: 'Consultation Médecine du Travail', description: 'Évaluation de la santé au travail.', price: 5000 },
-            { name: 'Consultation Infectiologique', description: 'Évaluation des infections.', price: 5000 },
-            { name: 'Consultation Allergologique', description: 'Évaluation des allergies.', price: 5000 },
-            { name: 'Consultation Hématologique', description: 'Évaluation des troubles sanguins.', price: 5000 },
-            { name: 'Consultation Gériatrique', description: 'Évaluation des besoins des personnes âgées.', price: 5000 },
-            { name: 'Consultation Médecine Interne', description: 'Évaluation des maladies internes.', price: 5000 },
-            { name: 'Consultation Chirurgicale Orthopédique', description: 'Évaluation des troubles orthopédiques.', price: 5000 },
-        ]
+                    { name: 'Consultation Généraliste', description: 'Consultation de routine', price: 15000 },
+                    { name: 'Consultation Spécialiste', description: 'Consultation avec un spécialiste', price: 30000 }
+                ]
             }
         ];
 
-        let currentSectionIndex = 0;
+        function createTableForSection(section) {
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+            table.appendChild(thead);
+            table.appendChild(tbody);
 
-        function renderTable(section) {
+            // Table headers
+            const headers = ['Sélectionner', 'Nom de l\'Examen', 'Description', 'Prix'];
+            const trHead = document.createElement('tr');
+            headers.forEach(header => {
+                const th = document.createElement('th');
+                th.textContent = header;
+                trHead.appendChild(th);
+            });
+            thead.appendChild(trHead);
+
+            // Table rows
+            section.exams.forEach(exam => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><input type="checkbox" class="exam-checkbox" data-name="${exam.name}" data-price="${exam.price}"></td>
+                    <td>${exam.name}</td>
+                    <td>${exam.description}</td>
+                    <td class="price">${exam.price} FCFA</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            return table;
+        }
+
+        function updateSection() {
             const sectionContainer = document.getElementById('section-container');
-            const searchInput = document.getElementById('search').value.toLowerCase();
-            const filteredExams = section.exams.filter(exam => exam.name.toLowerCase().includes(searchInput) || exam.description.toLowerCase().includes(searchInput));
-            
-            sectionContainer.innerHTML = `
-                <h2>${section.name}</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Examen</th>
-                            <th>Description</th>
-                            <th>Prix (FCFA)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${filteredExams.map(exam => `
-                            <tr>
-                                <td>${exam.name}</td>
-                                <td>${exam.description}</td>
-                                <td class="price">${exam.price}</td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-            `;
+            sectionContainer.innerHTML = '';
+
+            sections.forEach(section => {
+                const sectionTitle = document.createElement('h3');
+                sectionTitle.id = section.id;
+                sectionTitle.textContent = section.name;
+                sectionContainer.appendChild(sectionTitle);
+
+                const table = createTableForSection(section);
+                sectionContainer.appendChild(table);
+            });
         }
 
-        function updateNavigation() {
-            document.getElementById('prev-section-btn').disabled = currentSectionIndex === 0;
-            document.getElementById('next-section-btn').disabled = currentSectionIndex === sections.length - 1;
+        function updateSelectedExams() {
+            const selectedExamsList = document.getElementById('selected-exams-list');
+            selectedExamsList.innerHTML = '';
+
+            const checkboxes = document.querySelectorAll('.exam-checkbox:checked');
+            let total = 0;
+
+            checkboxes.forEach(checkbox => {
+                const name = checkbox.dataset.name;
+                const price = parseFloat(checkbox.dataset.price);
+
+                total += price;
+
+                const li = document.createElement('li');
+                li.textContent = `${name} - ${price} FCFA`;
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Supprimer';
+                removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
+                removeButton.onclick = () => {
+                    checkbox.checked = false;
+                    updateSelectedExams();
+                };
+                li.appendChild(removeButton);
+                selectedExamsList.appendChild(li);
+            });
+
+            document.getElementById('total-amount').textContent = `Total : ${total} FCFA`;
         }
 
-        document.getElementById('search').addEventListener('input', () => {
-            renderTable(sections[currentSectionIndex]);
-        });
+        function filterTable() {
+            const searchTerm = document.getElementById('search').value.toLowerCase();
+            const rows = document.querySelectorAll('#section-container table tbody tr');
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                const examName = cells[1].textContent.toLowerCase();
+                if (examName.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
 
-        document.getElementById('prev-section-btn').addEventListener('click', () => {
-            if (currentSectionIndex > 0) {
-                currentSectionIndex--;
-                renderTable(sections[currentSectionIndex]);
-                updateNavigation();
-            }
-        });
+        document.getElementById('search').addEventListener('input', filterTable);
 
-        document.getElementById('next-section-btn').addEventListener('click', () => {
-            if (currentSectionIndex < sections.length - 1) {
-                currentSectionIndex++;
-                renderTable(sections[currentSectionIndex]);
-                updateNavigation();
-            }
-        });
+        document.getElementById('section-container').addEventListener('change', updateSelectedExams);
 
-        renderTable(sections[currentSectionIndex]);
-        updateNavigation();
+        updateSection(); // Initialize the view with all sections
     </script>
 </body>
 
