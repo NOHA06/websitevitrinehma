@@ -2,11 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarifs des Examens de Routine</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>HMA - Hopital Militaire D'Abidjan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel>.js?id=336b767c2ad92' async='true'></script>
 
     
     <style>
@@ -85,10 +109,18 @@
         }
 
         .section-links a {
-            margin-right: 10px;
-            text-decoration: none;
-            color: #007bff;
-        }
+    margin-right: 10px;
+    text-decoration: none;
+    color: #368a33;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.section-links a:hover {
+    color: #ff500b;
+   text-decoration: none;
+}
+
 
         .section-links a:hover {
             text-decoration: underline;
@@ -97,56 +129,78 @@
 </head>
 
 <body>
- <!-- Topbar Start -->
- <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+
+     <!-- Spinner Start -->
+     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow nohatc" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+   <!-- Topbar Start -->
+   <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
     <div class="row gx-0 d-none d-lg-flex">
         <div class="col-lg-7 px-5 text-start">
             <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                <small class="fa fa-map-marker-alt me-2"></small>
-                <small>+225 Abidjan, Côte d'Ivoire</small>
+                <small class="fa fa-map-marker-alt nohatc me-2"></small>
+                <small>+225 Abidjan cote d'ivoire</small>
             </div>
             <div class="h-100 d-inline-flex align-items-center py-3">
-                <small class="far fa-clock me-2"></small>
-                <small>Lundi-Dimanche : 24h/24</small>
+                <small class="far fa-clock nohatc me-2"></small>
+                <small>lundi- dimache : 24h/24</small>
             </div>
         </div>
         <div class="col-lg-5 px-5 text-end">
             <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                <small class="fa fa-phone-alt me-2"></small>
+                <small class="fa fa-phone-alt nohatc me-2"></small>
                 <small>+225 07 58 07 53 26</small>
             </div>
             <div class="h-100 d-inline-flex align-items-center">
-                <a class="btn btn-sm-square rounded-circle bg-white me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-sm-square rounded-circle bg-white me-1" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-sm-square rounded-circle bg-white me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-facebook-f"></i></a>
+               
+            <!-- pase encore disponible
+               <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+               <a class="btn btn-sm-square rounded-circle bg-white nohatc me-0" href=""><i class="fab fa-instagram"></i></a>
+              -->  
             </div>
         </div>
     </div>
 </div>
 <!-- Topbar End -->
 
-<!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h1 class="m-0"><i class="far fa-hospital me-3"></i>HMA</h1>
-    </a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link">Accueil</a>
-            <a href="service.html" class="nav-item nav-link">Services</a>
-            <a href="feature.html" class="nav-item nav-link">Tarifications</a>
-            <a href="team.html" class="nav-item nav-link">Assurances</a>
-            <a href="parcour.html" class="nav-item nav-link">Parcours</a>
-            <a href="contact.html" class="nav-item nav-link active">Contact</a>
+    <!-- Navbar Start --><br>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+        
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
+           
+            <h1 class="m-0 nohatc"><img src="./img/HMA1.png" alt="" srcset="" class="img-thumbnail" style="width: 201px; height: 76px;"></h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Accueil</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="feature.html" class="nav-item nav-link active">Tarifications</a>
+                <a href="team.html" class="nav-item nav-link">Assurances</a>
+                <a href="parcour.html" class="nav-item nav-link">Parcours</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+            </div>
         </div>
+    </nav>
+    <!-- Navbar End -->
+    <br>
+ <!-- Page Header Start -->
+ <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <h1 class="display-3 text-white mb-3 animated slideInDown"> examens de routine</h1>
+        
     </div>
-</nav>
-<!-- Navbar End -->
-
-
+</div>
+<!-- Page Header End -->
     <div class="container">
         <h1>Tarifs des Examens de Routine</h1>
 
@@ -180,25 +234,125 @@
                 name: 'Laboratoire',
                 id: 'laboratoire',
                 exams: [
-                    { name: 'Examen Sanguin', description: 'Analyse de sang', price: 10000 },
-                    { name: 'Examen Urinaire', description: 'Analyse d’urine', price: 8000 }
-                ]
+                { name: 'Urée', description: 'Mesure du niveau d\'urée dans le sang.', price: 1000 },
+{ name: 'Glycémie', description: 'Mesure du taux de glucose dans le sang.', price: 1500 },
+{ name: 'Créatinine', description: 'Mesure de la créatinine dans le sang pour évaluer la fonction rénale.', price: 2500 },
+{ name: 'Bilirubine', description: 'Analyse des niveaux de bilirubine dans le sang.', price: 2000 },
+{ name: 'ASAT', description: 'Analyse des niveaux d\'aspartate aminotransférase (ASAT) pour évaluer la fonction hépatique.', price: 3000 },
+{ name: 'ALAT', description: 'Analyse des niveaux d\'alanine aminotransférase (ALAT) pour évaluer la fonction hépatique.', price: 3000 },
+{ name: 'Phosphatase Alcaline', description: 'Mesure des niveaux de phosphatase alcaline pour évaluer la santé osseuse.', price: 3000 },
+{ name: 'Protéinémie', description: 'Mesure du taux de protéines dans le sang.', price: 3000 },
+{ name: 'Cholestérol Total', description: 'Mesure du niveau de cholestérol total dans le sang.', price: 3000 },
+{ name: 'Chol LDL', description: 'Mesure du taux de cholestérol LDL dans le sang.', price: 4000 },
+{ name: 'Chol HDL', description: 'Mesure du taux de cholestérol HDL dans le sang.', price: 4000 },
+{ name: 'Triglycérides', description: 'Évaluation des niveaux de triglycérides dans le sang.', price: 3000 },
+{ name: 'Acide Urique', description: 'Mesure du niveau d\'acide urique dans le sang.', price: 2000 },
+{ name: 'Gamma GT', description: 'Mesure de l\'enzyme Gamma-glutamyltransférase (Gamma GT) dans le sang.', price: 2500 },
+{ name: 'Transaminases', description: 'Analyse des niveaux de transaminases pour évaluer la fonction hépatique.', price: 4500 },
+{ name: 'Protéinurie 24H', description: 'Détection de protéines dans l\'urine sur 24 heures.', price: 2000 },
+{ name: 'Glycosurie', description: 'Présence de glucose dans l\'urine.', price: 1000 },
+{ name: 'Créatinine Urinaire', description: 'Mesure de la créatinine dans l\'urine.', price: 2000 },
+{ name: 'Ac Anti HVC', description: 'Test d\'anticorps contre l\'hépatite C.', price: 8000 },
+{ name: 'Ac HBs', description: 'Test d\'anticorps contre l\'hépatite B.', price: 5000 },
+{ name: 'Ac Anti HIV total', description: 'Test d\'anticorps contre le VIH.', price: 8000 },
+{ name: 'Widal & Félix', description: 'Test de dépistage des bactéries responsables de la fièvre typhoïde.', price: 5000 },
+{ name: 'TPHA-VDRL', description: 'Test de dépistage de la syphilis.', price: 4000 },
+{ name: 'Sérologie VIH', description: 'Test de dépistage du VIH.', price: 3000 },
+{ name: 'Facteur Rhumatoïde', description: 'Test de dépistage du facteur rhumatoïde, indicateur de polyarthrite rhumatoïde.', price: 6000 },
+{ name: 'Séro Toxoplasmose', description: 'Test de dépistage de la toxoplasmose.', price: 6000 },
+{ name: 'Séro Rubéole', description: 'Test de dépistage de la rubéole.', price: 5000 },
+{ name: 'ASLO', description: 'Détection des anticorps anti-streptolysine O.', price: 4000 },
+{ name: 'Hémogramme', description: 'Analyse complète du sang.', price: 3000 },
+{ name: 'Groupe ABO/RH', description: 'Détermination du groupe sanguin et du facteur Rh.', price: 3000 },
+{ name: 'TP', description: 'Temps de Prothrombine, mesure de la coagulation du sang.', price: 3000 },
+{ name: 'TCA', description: 'Temps de Céphaline Activée, évaluation de la coagulation du sang.', price: 3000 },
+{ name: 'Électrophorèse Hb', description: 'Analyse des hémoglobines pour détecter les anomalies.', price: 8000 },
+{ name: 'Fibrinémie', description: 'Mesure des niveaux de fibrinogène dans le sang.', price: 5000 },
+{ name: 'CRP', description: 'Mesure de la protéine C-réactive pour évaluer l\'inflammation.', price: 5000 },
+{ name: 'VS', description: 'Vitesse de sédimentation des globules rouges, indicateur d\'inflammation.', price: 3000 },
+{ name: 'Protidogramme', description: 'Analyse des protéines dans le sang.', price: 7000 },
+{ name: 'EPS (KOF)', description: 'Examen parasitologique des selles.', price: 3500 },
+{ name: 'Coproculture', description: 'Culture de selles pour identifier les infections.', price: 3500 },
+{ name: 'ECBU', description: 'Examen cytobactériologique des urines.', price: 3500 },
+{ name: 'ECBU+ATB', description: 'Examen cytobactériologique des urines avec antibiogramme.', price: 12000 },
+{ name: 'ECBL LCR', description: 'Examen cytobactériologique du liquide céphalorachidien.', price: 12000 },
+{ name: 'ECBU PU/ PV', description: 'Analyse des urines pour la détection des protéines urinaires/pyurie.', price: 7000 },
+{ name: 'Spermogramme', description: 'Analyse de la qualité et de la quantité des spermatozoïdes.', price: 7000 },
+{ name: 'Phosph Acides', description: 'Analyse des niveaux de phosphatases acides.', price: 3500 },
+{ name: 'BETA HCG', description: 'Test de grossesse par détection de la beta-hCG.', price: 10000 },
+{ name: 'PSA', description: 'Dosage de l\'antigène prostatique spécifique (PSA) pour évaluer la santé de la prostate.', price: 20000 },
+{ name: 'ALPHAFOETOP', description: 'Test de détection de l\'alpha-foetoprotéine pour dépister certains cancers.', price: 20000 },
+{ name: 'ACE', description: 'Antigène carcinoembryonnaire, marqueur tumoral utilisé dans le dépistage de certains cancers.', price: 20000 },
+{ name: 'FSH', description: 'Hormone folliculo-stimulante, évaluation de la fonction reproductive.', price: 8000 },
+{ name: 'LH', description: 'Hormone lutéinisante, évaluation de la fonction reproductive.', price: 8000 },
+{ name: 'LDH', description: 'Lactate déshydrogénase, enzyme impliquée dans les processus énergétiques.', price: 8000 },
+{ name: 'TSH us', description: 'Test de l\'hormone thyréotrope ultra-sensible pour évaluer la fonction thyroïdienne.', price: 20000 },
+{ name: 'T3', description: 'Dosage de la triiodothyronine pour évaluer la fonction thyroïdienne.', price: 20000 },
+{ name: 'T4', description: 'Dosage de la thyroxine pour évaluer la fonction thyroïdienne.', price: 20000 }
+]
             },
             {
                 name: 'Imagerie Médicale',
                 id: 'imagerie-medicale',
                 exams: [
-                    { name: 'Radiographie', description: 'Imagerie des os', price: 20000 },
-                    { name: 'Échographie', description: 'Imagerie des organes', price: 25000 }
-                ]
+                { name: 'Cran 3F', description: 'Radiographie standard du crâne en trois incidences.', price: 3500 },
+{ name: 'Thorax normal', description: 'Radiographie standard du thorax.', price: 2000 },
+{ name: 'Thorax + Face', description: 'Radiographie thoracique avec incidences complémentaires.', price: 4000 },
+{ name: 'Cavum', description: 'Radiographie des cavités nasales.', price: 3500 },
+{ name: 'Face/Pieds', description: 'Radiographie des pieds, face.', price: 2000 },
+{ name: 'Main et poignet B & G', description: 'Radiographie des mains et des poignets, bilatérale.', price: 5000 },
+{ name: 'Massif facial 3F', description: 'Radiographie du massif facial, en trois incidences.', price: 5000 },
+{ name: 'Ceinture scapulaire B & G (2F)', description: 'Radiographie de la ceinture scapulaire bilatérale.', price: 5000 },
+{ name: 'Rachis cervico-thoracique (RTH) (C7-D1)', description: 'Radiographie du rachis cervico-thoracique.', price: 7000 },
+{ name: 'Rachis dorso-lombaire + Face-Philocrom', description: 'Radiographie du rachis dorso-lombaire.', price: 10000 },
+{ name: 'Bassin face', description: 'Radiographie du bassin, incidence de face.', price: 7000 },
+{ name: 'Bassin face + Hanches', description: 'Radiographie du bassin avec incidences des hanches.', price: 10000 },
+{ name: 'Epaule droite', description: 'Radiographie de l\'épaule droite.', price: 3500 },
+{ name: 'Genou droit + Jambe', description: 'Radiographie du genou droit et de la jambe.', price: 5000 },
+{ name: 'Avant-bras B & G', description: 'Radiographie des avant-bras, bilatérale.', price: 5000 },
+{ name: 'Poignet B & G', description: 'Radiographie des poignets, bilatérale.', price: 5000 },
+{ name: 'Thorax face', description: 'Radiographie thoracique, incidence de face.', price: 2000 },
+{ name: 'Rachis lombaire (face et profil)', description: 'Radiographie du rachis lombaire, incidences de face et de profil.', price: 5000 },
+{ name: 'Hanche gauche, incl. profil de Lequesne', description: 'Radiographie de la hanche gauche avec profil spécial.', price: 10000 },
+{ name: 'Genou face + profil', description: 'Radiographie du genou, incidences de face et de profil.', price: 5000 },
+{ name: 'Bassin face + cuisse gauche', description: 'Radiographie du bassin avec cuisse gauche.', price: 5000 },
+{ name: 'Cuisse B & G', description: 'Radiographie des cuisses, bilatérale.', price: 5000 },
+{ name: 'Rachis lombaire + coccyx', description: 'Radiographie du rachis lombaire et du coccyx.', price: 8000 },
+{ name: 'Face épaule droite', description: 'Radiographie de l\'épaule droite, incidence de face.', price: 3500 },
+{ name: 'Genou face et profil', description: 'Radiographie du genou, incidences de face et de profil.', price: 5000 },
+{ name: 'Poignet droit + main gauche', description: 'Radiographie du poignet droit et de la main gauche.', price: 5000 },
+{ name: 'Genou B & G', description: 'Radiographie des deux genoux.', price: 5000 },
+{ name: 'Rachis cervical (3F)', description: 'Radiographie du rachis cervical, trois incidences.', price: 7000 },
+{ name: 'Rachis lombaire (3F)', description: 'Radiographie du rachis lombaire, trois incidences.', price: 8000 },
+{ name: 'Rachis lombaire profil et face (3F)', description: 'Radiographie du rachis lombaire, profil et face.', price: 8000 }
+]
             },
             {
                 name: 'Consultations',
                 id: 'consultations',
                 exams: [
-                    { name: 'Consultation Généraliste', description: 'Consultation de routine', price: 15000 },
-                    { name: 'Consultation Spécialiste', description: 'Consultation avec un spécialiste', price: 30000 }
-                ]
+{ name: 'Consultation Générale', description: 'Évaluation générale de la santé par un médecin.', price: 5000 },
+{ name: 'Consultation Spécialiste', description: 'Consultation avec un spécialiste en fonction des besoins du patient.', price: 5000 },
+{ name: 'Examen Ophtalmologique', description: 'Évaluation de la santé des yeux et de la vision.', price: 5000 },
+{ name: 'Consultation Cardiologique', description: 'Évaluation de la santé cardiaque par un cardiologue.', price: 5000 },
+{ name: 'Consultation Endocrinologique', description: 'Évaluation des glandes endocrines.', price: 5000 },
+{ name: 'Consultation Dermatologique', description: 'Évaluation des problèmes de peau.', price: 5000 },
+{ name: 'Consultation Pédiatrique', description: 'Évaluation de la santé des enfants.', price: 5000 },
+{ name: 'Consultation Gynécologique', description: 'Évaluation de la santé gynécologique.', price: 5000 },
+{ name: 'Consultation Urologique', description: 'Évaluation des problèmes urologiques.', price: 5000 },
+{ name: 'Consultation Neurologique', description: 'Évaluation de la santé neurologique.', price: 26000 },
+{ name: 'Consultation Psychiatrie', description: 'Évaluation de la santé mentale et émotionnelle.', price: 5000 },
+{ name: 'Consultation Rhumatologique', description: 'Évaluation des troubles musculo-squelettiques.', price: 5000 },
+{ name: 'Consultation Nutritionnelle', description: 'Évaluation et conseils sur la nutrition.', price: 5000 },
+{ name: 'Consultation Chirurgicale', description: 'Évaluation des besoins chirurgicaux.', price: 5000 },
+{ name: 'Consultation Médecine du Travail', description: 'Évaluation de la santé au travail.', price: 5000 },
+{ name: 'Consultation Infectiologique', description: 'Évaluation des infections.', price: 5000 },
+{ name: 'Consultation Allergologique', description: 'Évaluation des allergies.', price: 5000 },
+{ name: 'Consultation Hématologique', description: 'Évaluation des troubles sanguins.', price: 5000 },
+{ name: 'Consultation Gériatrique', description: 'Évaluation des besoins des personnes âgées.', price: 5000 },
+{ name: 'Consultation Médecine Interne', description: 'Évaluation des maladies internes.', price: 5000 },
+{ name: 'Consultation Chirurgicale Orthopédique', description: 'Évaluation des troubles orthopédiques.', price: 5000 },
+]
             }
         ];
 
@@ -298,6 +452,29 @@
 
         updateSection(); // Initialize the view with all sections
     </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg nohabtn btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <!-- <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=336b767c2ad92' async='true'></script> -->
+     <script src="js/main.js"></script> 
+   
+    
+    
 </body>
 
 </html>
