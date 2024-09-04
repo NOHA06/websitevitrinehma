@@ -114,7 +114,7 @@
     color: #368a33;
     font-weight: bold;
     transition: color 0.3s ease, text-shadow 0.3s ease;
-}
+    }
 
 .section-links a:hover {
     color: #ff500b;
@@ -125,7 +125,123 @@
         .section-links a:hover {
             text-decoration: underline;
         }
-    </style>
+
+
+/* Conteneur principal */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    color: #ff500b;
+    margin-bottom: 20px;
+}
+
+/* Barre de recherche */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Liens des sections */
+.section-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.section-links a {
+    text-decoration: none;
+    color: #ff500b;
+    margin: 0 15px;
+    font-weight: bold;
+}
+/* Styles pour le reçu */
+.receipt {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.receipt h3 {
+    margin: 0 0 10px;
+    color: #a02a2a;
+}
+
+.selected-exams ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.selected-exams ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.total-container {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff8800;
+}
+
+/* Optionnel : Ajouter un style pour les éléments de liste si vous voulez un style de reçu */
+.selected-exams ul li {
+    font-size: 1em;
+    color: #ff4800;
+}
+
+/* Styles pour la barre de recherche */
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar .form-control {
+    width: 100%;
+    padding-right: 30px; /* Assure un espace pour le bouton */
+}
+
+.clear-button {
+    position: absolute;
+    right: 10px; /* Positionne le bouton à droite */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888; /* Couleur de l'icône */
+    transition: color 0.3s ease;
+}
+
+.clear-button:hover {
+    color: #333; /* Couleur de l'icône au survol */
+}
+
+/* Optionnel : ajout de padding pour l'input */
+.search-bar input {
+    padding-right: 40px; /* Ajuster pour laisser de l'espace pour le bouton */
+}
+
+ </style>
 </head>
 
 <body>
@@ -157,7 +273,7 @@
                 <small>+225 07 58 07 53 26</small>
             </div>
             <div class="h-100 d-inline-flex align-items-center">
-                <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href="https://www.facebook.com/profile.php?id=61557155165989&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
                
             <!-- pase encore disponible
                <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-twitter"></i></a>
@@ -195,25 +311,31 @@
     <br>
  <!-- Page Header Start -->
  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
+    <div class="py-5">
         <h1 class="display-3 text-white mb-3 animated slideInDown"> examens de routine</h1>
-        
     </div>
 </div>
 <!-- Page Header End -->
-    <div class="container">
-        <h1>Tarifs des Examens de Routine</h1>
+<div class="container">
+    <h1>Tarifs des Examens de Routine</h1>
 
-        <div class="search-bar">
-            <input type="text" id="search" class="form-control" placeholder="Rechercher un examen...">
-        </div>
+   
 
-        <div class="section-links">
-            <a href="#laboratoire" id="link-laboratoire">Laboratoire</a>
-            <a href="#imagerie-medicale" id="link-imagerie-medicale">Imagerie Médicale</a>
-            <a href="#consultations" id="link-consultations">Consultations</a>
-        </div>
+    <div class="search-bar">
+        <input type="text" id="search" class="form-control" placeholder="Rechercher un examen...">
+        <button type="button" id="clear-search" class="clear-button" aria-label="Clear search">
+            &times;
+        </button>
+    </div>
+    
 
+    <div class="section-links">
+        <a href="#laboratoire" id="link-laboratoire">Laboratoire</a>
+        <a href="#imagerie-medicale" id="link-imagerie-medicale">Imagerie Médicale</a>
+        <a href="#consultations" id="link-consultations">Consultations</a>
+    </div>
+
+    <div class="receipt">
         <div class="selected-exams" id="selected-exams">
             <h3>Examens Sélectionnés</h3>
             <ul id="selected-exams-list"></ul>
@@ -222,11 +344,13 @@
         <div class="total-container">
             <h3 id="total-amount">Total : 0 FCFA</h3>
         </div>
-
-        <div id="section-container">
-            <!-- Sections dynamiques seront insérées ici -->
-        </div>
     </div>
+
+    <div id="section-container">
+        <!-- Sections dynamiques seront insérées ici -->
+    </div>
+</div>
+
 
     <script>
         const sections = [
@@ -448,9 +572,18 @@
 
         document.getElementById('search').addEventListener('input', filterTable);
 
-        document.getElementById('section-container').addEventListener('change', updateSelectedExams);
+document.getElementById('section-container').addEventListener('change', updateSelectedExams);
 
-        updateSection(); // Initialize the view with all sections
+updateSection(); // Initialize the view with all sections
+
+document.getElementById('clear-search').addEventListener('click', function() {
+    document.getElementById('search').value = '';
+    document.getElementById('search').focus();
+    filterTable(); // Optionnel : Refiltrer la table ou la liste après effacement
+});
+
+
+        
     </script>
 
     <!-- Back to Top -->

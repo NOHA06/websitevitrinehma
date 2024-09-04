@@ -31,7 +31,32 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    
+    <style>
+       /* Style pour centrer la div */
+
+
+/* Style chic pour la div contenant l'image */
+.chic-image-container {
+    width: 1024px; /* Ajustez la taille selon vos besoins */
+    height: 768px; /* Ajustez la taille selon vos besoins */
+    border-radius: 20px; /* Bordures arrondies */
+    overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas la div */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour un effet chic */
+    background-color: #fff; /* Couleur de fond blanche pour plus de contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style pour l'image */
+.chic-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pour que l'image remplisse la div sans être déformée */
+}
+
+
+    </style>
         
 </head>
 
@@ -290,8 +315,9 @@
 <div>
     <br>
      <div class="org-chart">
-      <div><img src="/img/assurances/fpm.jpeg" alt="" srcset=""> <h3>Patient Assuré FPM</h3></div>
-   
+      <div><div class="chic-image-container">
+        <img src="img/fpm.png" alt="Image chic">
+    </div>
         <div class="level">
             <div class="person">Se Rendre a l'Acceuil</div>
         </div>
@@ -308,14 +334,17 @@
             <div class="person">Prendre un RDV</div> >
         </div>
     </div>
-
+    
+    
 
 
 
 <br><hr>
     <div class="org-chart">
-        <div><img src="/img/assurances/fpm.jpeg" alt="" srcset=""> <h3>Patient Assuré FPM</h3></div>
-     
+        <div>
+            <div class="chic-image-container">
+              <img src="img/nfpm.png" alt="Image chic">
+          </div>
           <div class="level">
               <div class="person">Se Rendre a l'Acceuil</div>
           </div>
@@ -335,14 +364,16 @@
 
 
    
-   
+    
 
 
 
 <br> <hr>
     <div class="org-chart">
-        <div><img src="/img/assurances/fpm.jpeg" alt="" srcset=""> <h3>Patient Assuré FPM</h3></div>
-   
+        <div> <div class="chic-image-container">
+            <img src="img/ras.png" alt="Image chic">
+        </div>
+        
         <div class="level">
             <div class="person">Se Rendre a l'Acceuil</div>
         </div>
@@ -359,11 +390,12 @@
             <div class="person">Prendre un RDV</div> >
         </div>
     </div>
+   
     
 </div>
 
 
-
+</div>
 
 
 
