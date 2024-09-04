@@ -34,100 +34,13 @@
 
     
     <style>
-        .container {
-            margin-top: 20px;
-        }
-
-        .search-bar {
-            margin-bottom: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f4f4f4;
-        }
-
-        .price {
-            text-align: right;
-        }
-
-        .navigation {
-            margin-bottom: 20px;
-        }
-
-        .total-container {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .selected-exams {
-            margin-bottom: 20px;
-        }
-
-        .btn-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .btn-container button {
-            margin-right: 10px;
-        }
-
-        .total-container h3 {
-            margin: 0;
-        }
-
-        .selected-exams ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .selected-exams li {
-            margin-bottom: 5px;
-        }
-
-        .selected-exams button {
-            margin-left: 10px;
-        }
-
-        .section-links {
-            margin-bottom: 20px;
-        }
-
-        .section-links a {
-    margin-right: 10px;
-    text-decoration: none;
-    color: #368a33;
-    font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-    }
-
-.section-links a:hover {
-    color: #ff500b;
-   text-decoration: none;
+  /* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-
-        .section-links a:hover {
-            text-decoration: underline;
-        }
-
-
-/* Conteneur principal */
 .container {
     width: 80%;
     margin: 20px auto;
@@ -137,16 +50,17 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Titre principal */
 h1 {
     text-align: center;
     color: #ff500b;
     margin-bottom: 20px;
 }
 
-/* Barre de recherche */
 .search-bar {
     margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .search-bar .form-control {
@@ -154,9 +68,24 @@ h1 {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    padding-right: 40px; /* Ajustement pour le bouton clear */
 }
 
-/* Liens des sections */
+.clear-button {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.clear-button:hover {
+    color: #333;
+}
+
 .section-links {
     display: flex;
     justify-content: center;
@@ -165,11 +94,41 @@ h1 {
 
 .section-links a {
     text-decoration: none;
-    color: #ff500b;
-    margin: 0 15px;
+    color: #368a33;
     font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-/* Styles pour le reçu */
+
+.section-links a:hover {
+    color: #ff500b;
+    text-decoration: none;
+}
+
+.table-container {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.price {
+    text-align: right;
+}
+
 .receipt {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -181,7 +140,7 @@ h1 {
 
 .receipt h3 {
     margin: 0 0 10px;
-    color: #a02a2a;
+    color: #1f2042;
 }
 
 .selected-exams ul {
@@ -193,6 +152,8 @@ h1 {
 .selected-exams ul li {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
+    font-size: 1em;
+    color: #ff4800;
 }
 
 .total-container {
@@ -203,43 +164,86 @@ h1 {
     color: #ff8800;
 }
 
-/* Optionnel : Ajouter un style pour les éléments de liste si vous voulez un style de reçu */
-.selected-exams ul li {
-    font-size: 1em;
-    color: #ff4800;
+/* Media Queries pour les tablettes et petits écrans (moins de 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .section-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-links a {
+        margin-bottom: 10px;
+    }
+
+    th, td {
+        font-size: 0.9em;
+        padding: 6px;
+    }
+
+    .total-container {
+        font-size: 1.1em;
+    }
+
+    .receipt {
+        padding: 15px;
+    }
+
+    .clear-button {
+        font-size: 16px;
+    }
 }
 
-/* Styles pour la barre de recherche */
-.search-bar {
-    position: relative;
-    display: flex;
-    align-items: center;
+/* Media Queries pour les smartphones (moins de 576px) */
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .section-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-links a {
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    th, td {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+
+    .total-container {
+        font-size: 1em;
+    }
+
+    .receipt {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .clear-button {
+        font-size: 14px;
+    }
 }
 
-.search-bar .form-control {
-    width: 100%;
-    padding-right: 30px; /* Assure un espace pour le bouton */
-}
-
-.clear-button {
-    position: absolute;
-    right: 10px; /* Positionne le bouton à droite */
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    color: #888; /* Couleur de l'icône */
-    transition: color 0.3s ease;
-}
-
-.clear-button:hover {
-    color: #333; /* Couleur de l'icône au survol */
-}
-
-/* Optionnel : ajout de padding pour l'input */
-.search-bar input {
-    padding-right: 40px; /* Ajuster pour laisser de l'espace pour le bouton */
-}
 
  </style>
 </head>
