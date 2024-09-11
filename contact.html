@@ -84,6 +84,37 @@
         .contact-form button:hover {
             background-color: #45a049;
         }
+
+       
+
+        .upload-container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        /* label {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        } */
+
+        img {
+            display: block;
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
 
    <!-- Topbar Start -->
@@ -208,16 +239,30 @@
                             <label for="Age">Age</label>
                             <input type="number" id="Age" name="Age" required>
 
-                            <label for="ville">Ville</label>
+                            <label for="ville">Ville & Quartier</label>
                             <input type="text" id="ville" name="ville" required>
 
-                            <label for="quartier">Quartier</label>
-                            <input type="text" id="quartier" name="quartier" required>
-
+                            
+                            <label for="imageUpload">   Choisir une image</label>
+                            <input type="file" id="imageUpload" accept="image/*" width="50px" height="50px"> 
+                            <img id="imagePreview" src="#" alt="Aperçu de l'image" style="display: none;" style="max-width: 300px; max-height: 300px;">
+                
+                            <br>
+                           
                             <label for="message">Votre Message</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
-
+             
+            
+                           
                             <button type="submit">Envoyer</button>
+
+
+                         
+                            
+                          
+
+
+
                         </form>
                     </div>
                 </div>
@@ -226,41 +271,29 @@
     </div>
     <!-- Contact End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-white mb-3">Adresse</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Route du Zoo, Abidjan, Côte d'Ivoire</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+225 07 58 07 53 26</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>contact@klinikhma.ci</p>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-white mb-3">Liens rapides</h4>
-                    <a class="btn btn-link" href="">Accueil</a>
-                    <a class="btn btn-link" href="">À propos</a>
-                    <a class="btn btn-link" href="">Nos services</a>
-                    <a class="btn btn-link" href="">Politique de confidentialité</a>
-                    <a class="btn btn-link" href="">Contactez-nous</a>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-white mb-3">S'abonner</h4>
-                    <p>Pour recevoir nos dernières nouvelles, abonnez-vous à notre newsletter.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Votre email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">S'abonner</button>
-                    </div>
-                </div>
+      <!-- Footer Start -->
+   <div class="container-fluid bg-light text-dark mt-5 pt-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-4">Contactez-Nous</h5>
+                <p class="mb-4"><i class="fa fa-map-marker-alt me-3"></i> +225 Abidjan Côte d'Ivoire</p>
+                <p class="mb-4"><i class="fa fa-phone-alt me-3"></i> +225 07 58 07 53 26</p>
+                <p><i class="fa fa-envelope me-3"></i> contact@hma.ci</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-4">Liens Utiles</h5>
+                <a class="btn btn-link" href="#">Home</a>
+                <a class="btn btn-link" href="#">Service</a>
+                <a class="btn btn-link" href="#">Tarifications</a>
+                <a class="btn btn-link" href="#">Assurances</a>
+                <a class="btn btn-link" href="#">Parcourt</a>
+                <a class="btn btn-link" href="#">Contact</a>
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark text-light py-4">
-        <div class="container text-center">
-            <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Klinik HMA</a>. Tous droits réservés.</p>
-        </div>
-    </div>
-    <!-- Footer End -->
+</div>
+<!-- Footer -->
 
    <!-- Back to Top -->
    <a href="#" class="btn btn-lg nohabtn btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -294,6 +327,22 @@
                 map: map
             });
         }
+    </script>
+      <script>
+        const imageUpload = document.getElementById('imageUpload');
+        const imagePreview = document.getElementById('imagePreview');
+    
+        imageUpload.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
     </script>
 </body>
 </html>

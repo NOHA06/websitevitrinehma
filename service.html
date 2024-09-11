@@ -119,6 +119,25 @@
                 <h1>Health Care Solutions</h1>
             </div>
 
+
+
+<!-- Recherche Start -->
+<div class="container-fluid bg-light py-3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Rechercher un Service...">
+                    <button class="btn btn-primary" type="button" id="searchButton">Rechercher</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Recherche End -->
+<br>
+
+
             <div class="row g-4">
                
 
@@ -134,15 +153,18 @@
 
 
 
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/urgence.jpg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : 7/7 , 24/24</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalLabelurgences">
-                             <i class="fa fa-plus nohatc me-3"></i> Voir Plus </a> <br> 
-                    </div>
-                </div>
+                
+                        <!-- Services Start -->
+                        <div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+                                <img src="./img/services/urgence.jpg" alt="Urgence medicale" class="img-fluid mx-auto d-block mb-3">
+                                <h4 class="ouvert">Ouvert : 7/7 , 24/24</h4>
+                                <br>
+                                <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalLabelurgences">
+                                    <i class="fa fa-plus nohatc me-3"></i> Voir Plus
+                                </a>
+                            </div>
+                        </div>
 
 
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -297,128 +319,203 @@
                     </div>
                 </div>
 
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+                        <img src="./img/services/pharma.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
+                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+                        <br>
+                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
+                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+                        <img src="./img/services/radio.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
+                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+                        <br>
+                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
+                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+                    </div>
+                </div>
 
 
 
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+                        <img src="./img/services/endoscopie.jpg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
+                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+                        <br>
+                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
+                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+                    </div>
+                </div>
 
-  <!-- Modal  urgence medicale -->
-  <div class="modal fade" id="readMoreModalLabelurgences" tabindex="-1" aria-labelledby="readMoreModalLabelurgences" aria-hidden="true">
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+                        <img src="./img/services/viscerale.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
+                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+                        <br>
+                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
+                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+                    </div>
+                </div>
+
+
+<!-- Modal Urgence-->
+<div class="modal fade" id="readMoreModalLabelcardio" tabindex="-1" aria-labelledby="readMoreModalLabelcardio" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="readMoreModalLabelurgences">Le service des urgences médico-chirurgicales de l'Hôpital Militaire d'Abidjan</h5>
-       
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>
-            Le service des urgences médico-chirurgicales de l'Hôpital Militaire d'Abidjan (HMA) est spécialisé dans la prise en charge rapide et efficace des urgences médicales et chirurgicales. Notre équipe de médecins, chirurgiens, infirmiers et personnel paramédical hautement qualifiée est disponible 24h/24 pour fournir des soins de haute qualité dans un environnement sécurisé. Nous traitons une large gamme de situations d'urgence, y compris les traumatismes, les interventions chirurgicales d'urgence, les crises cardiaques, les accidents vasculaires cérébraux, et bien d'autres urgences médicales critiques.
-          <img src="/img/urgencemedicochirugicale/side-view-victim-with-oxygen-mask.jpg" alt="Description de l'image" class="img-fluid my-3">
-          
-          <p>
-            Notre mission est d'assurer une stabilisation rapide des patients tout en offrant des soins chirurgicaux d'urgence lorsque nécessaire, en utilisant les technologies les plus avancées et en appliquant les meilleurs protocoles de traitement. Chaque intervention est réalisée avec précision, et un suivi attentif est assuré pour garantir la sécurité et le rétablissement optimal de nos patients.
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="readMoreModalLabelcardio">Le Service de cardiologie de l'HMA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+                <p><strong>Batiment B</strong> </p>
 
+                <p><strong>Personnel médical</strong> :</p>
+                <div class="row">
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Ahoua">
+                            <p> Dr. Ahoua , medecin,colonel ,cardiologue</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Yao">
+                            <p> Dr. Yao , medecin,major ,cardiologue assistant</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/idfe.jpg" class="card-img-top" alt="Dr. Kouadio">
+                            <p> Dr. Kouadio , medecin,cardiologue infirmier</p>
+                        </div>
+                    </div>
+                </div>
+   <br> <br> <br>
+                   <div class="row">
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Ahoua">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Yao">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/idfe.jpg" class="card-img-top" alt="Dr. Kouadio">
+                        </div>
+                    </div>
+                </div>
 
-          <p>
-           
-          <!-- <img src="/img/cbdentaire/2.jpeg" alt="Description de la deuxième image" class="img-fluid my-3">
-           -->
-          <p>
-            <strong>Chef de  Service</strong> Colonel koffi  </p>
+                <p><strong>Jours de présence des médecins</strong> :</p>
+                <ul>
+                    <li>Dr. Ahoua : Lundi, Mercredi, Vendredi</li>
+                    <li>Dr. Yao : Mardi, Jeudi</li>
+                    <li>Dr. Kouadio : Lundi, Mardi</li>
+                    <li>Dr. Konan : Mercredi, Vendredi</li>
+                    <li>Dr. Ngoran : Jeudi, Samedi</li>
+                </ul>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
+
   
-  
 
-
- <!-- Modal  cardio-->
- <div class="modal fade" id="readMoreModalLabelcardio" tabindex="-1" aria-labelledby="readMoreModalLabelcardio" aria-hidden="true">
+<!-- Modal cardio-->
+<div class="modal fade" id="readMoreModalLabelcardio" tabindex="-1" aria-labelledby="readMoreModalLabelcardio" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="readMoreModalLabelcardio">Le Service de chirurgie  De  L'HMA</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p> 
-            Le service de cardiologie de l'Hôpital Militaire d'Abidjan (HMA) est spécialisé dans la prévention, le diagnostic, et le traitement des maladies cardiovasculaires. Nous offrons des soins complets et personnalisés pour chaque patient, en mettant l'accent sur une prise en charge rapide et efficace des affections cardiaques. Notre équipe de cardiologues expérimentés utilise les technologies les plus avancées pour assurer des soins de qualité dans un environnement sûr et bienveillant.
-
-            <img src="/img/cardio/hospital-ward-with-heart-rate-monitor-healthcare-recovery-nobody-emergency-room-with-empty-bed-medical-equipment-reanimation-medical-assistance-healing.jpg" alt="Description de l'image" class="img-fluid my-3"><p>
-       
-                <p>
-                    <strong>Chef de  Service</strong> Colonel koffi  </p>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="readMoreModalLabelcardio">Le Service de cardiologie de l'HMA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-       
-       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
-       </div>
-    </div>
-    </div>
-
-
-
- <!-- Modal  gyneco-->
- <div class="modal fade" id="readMoreModalLabelgynécologie-obstétrique" tabindex="-1" aria-labelledby="readMoreModalLabelgynécologie-obstétrique" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="readMoreModalLabelgynécologie-obstétrique">Le Service de gynécologie-obstétrique De  L'HMA</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p> 
-            Le service de gynécologie-obstétrique de l'Hôpital Militaire d'Abidjan (HMA) est dédié à la santé des femmes, offrant des soins de haute qualité à chaque étape de la vie, de la puberté à la ménopause. Notre équipe de professionnels qualifiés fournit un suivi personnalisé pour les consultations prénatales, les accouchements, ainsi que pour les soins gynécologiques généraux.
-
-
-            <img src="/img/cardio/hospital-ward-with-heart-rate-monitor-healthcare-recovery-nobody-emergency-room-with-empty-bed-medical-equipment-reanimation-medical-assistance-healing.jpg" alt="Description de l'image" class="img-fluid my-3"><p>
-       
+            <div class="modal-body">
                 <p>
-                    <strong>Chef de  Service</strong> Colonel koffi  </p>
+                    Le service de cardiologie de l'Hôpital Militaire d'Abidjan (HMA) est spécialisé dans la prévention, le diagnostic, et le traitement des maladies cardiovasculaires. Nous offrons des soins complets et personnalisés pour chaque patient, en mettant l'accent sur une prise en charge rapide et efficace des affections cardiaques. Notre équipe de cardiologues expérimentés utilise les technologies les plus avancées pour assurer des soins de qualité dans un environnement sûr et bienveillant.
+                </p>
+
+                <p><strong>Médecin Chef du Service</strong> : Colonel Koffi</p>
+
+                <p><strong>Personnel médical</strong> :</p>
+                <div class="row">
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Ahoua">
+                            <p> Dr. Ahoua , medecin,colonel ,cardiologue</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Yao">
+                            <p> Dr. Yao , medecin,major ,cardiologue assistant</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/idfe.jpg" class="card-img-top" alt="Dr. Kouadio">
+                            <p> Dr. Kouadio , medecin,cardiologue infirmier</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                   <br> <br> <br>
+                   <div class="row">
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Ahoua">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Yao">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 text-center">
+                        <div class="card">
+                            <img src="/img/idfe.jpg" class="card-img-top" alt="Dr. Kouadio">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                   
+                   
+               
+
+                <p><strong>Jours de présence des médecins</strong> :</p>
+                <ul>
+                    <li>Dr. Ahoua : Lundi, Mercredi, Vendredi</li>
+                    <li>Dr. Yao : Mardi, Jeudi</li>
+                    <li>Dr. Kouadio : Lundi, Mardi</li>
+                    <li>Dr. Konan : Mercredi, Vendredi</li>
+                    <li>Dr. Ngoran : Jeudi, Samedi</li>
+                </ul>
             </div>
-       
-       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
-       </div>
-    </div>
-    </div>
 
-
-
-     <!-- Modal  gyneco-->
- <div class="modal fade" id="readMoreModalLabelgynécologie-obstétrique" tabindex="-1" aria-labelledby="readMoreModalLabelgynécologie-obstétrique" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="readMoreModalLabelgynécologie-obstétrique">Le Service de gynécologie-obstétrique De  L'HMA</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
         </div>
-        <div class="modal-body">
-          <p> 
-            Le service de gynécologie-obstétrique de l'Hôpital Militaire d'Abidjan (HMA) est dédié à la santé des femmes, offrant des soins de haute qualité à chaque étape de la vie, de la puberté à la ménopause. Notre équipe de professionnels qualifiés fournit un suivi personnalisé pour les consultations prénatales, les accouchements, ainsi que pour les soins gynécologiques généraux.
-
-
-            <img src="/img/cardio/hospital-ward-with-heart-rate-monitor-healthcare-recovery-nobody-emergency-room-with-empty-bed-medical-equipment-reanimation-medical-assistance-healing.jpg" alt="Description de l'image" class="img-fluid my-3"><p>
-       
-                <p>
-                    <strong>Chef de  Service</strong> Colonel koffi  </p>
-            </div>
-       
-       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
-       </div>
     </div>
-    </div>
-
-
-
-
-
-
+</div>
 
 
 
@@ -433,63 +530,29 @@
 
     <!-- Service End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
+       <!-- Footer Start -->
+       <div class="container-fluid bg-light text-dark mt-5 pt-5">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Contactez-nous</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt nohatc me-3"></i>+225 Abidjan Côte d'Ivoire</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt nohatc me-3"></i>+225 07 58 07 53 26</p>
-                    <p class="mb-2"><i class="fa fa-envelope nohatc me-3"></i>info@hma.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contactez-Nous</h5>
+                    <p class="mb-4"><i class="fa fa-map-marker-alt me-3"></i> +225 Abidjan Côte d'Ivoire</p>
+                    <p class="mb-4"><i class="fa fa-phone-alt me-3"></i> +225 07 58 07 53 26</p>
+                    <p><i class="fa fa-envelope me-3"></i> contact@hma.ci</p>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Liens Rapides</h4>
-                    <a class="btn btn-link" href="#">About Us</a>
-                    <a class="btn btn-link" href="#">Contact Us</a>
-                    <a class="btn btn-link" href="#">Our Services</a>
-                    <a class="btn btn-link" href="#">Terms & Condition</a>
-                    <a class="btn btn-link" href="#">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Liens Populaires</h4>
-                    <a class="btn btn-link" href="#">About Us</a>
-                    <a class="btn btn-link" href="#">Contact Us</a>
-                    <a class="btn btn-link" href="#">Our Services</a>
-                    <a class="btn btn-link" href="#">Terms & Condition</a>
-                    <a class="btn btn-link" href="#">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100 mt-3">
-                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email">
-                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Klinik</a>, All Right Reserved. 
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--- This template is licensed under Creative Commons Attribution 3.0 (CC BY 3.0) https://bootstrapmade.com/licensing/ --->
-                        Designed By <a class="border-bottom" href="https://bootstrapmade.com">BootstrapMade</a>
-                    </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Liens Utiles</h5>
+                    <a class="btn btn-link" href="#">Home</a>
+                    <a class="btn btn-link" href="#">Service</a>
+                    <a class="btn btn-link" href="#">Tarifications</a>
+                    <a class="btn btn-link" href="#">Assurances</a>
+                    <a class="btn btn-link" href="#">Parcourt</a>
+                    <a class="btn btn-link" href="#">Contact</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+    <!-- Footer -->
 
      <!-- Back to Top -->
      <a href="#" class="btn btn-lg nohabtn btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -509,6 +572,37 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
+
+    <script>
+        $(document).ready(function() {
+            $('#searchButton').on('click', function() {
+                var searchTerm = $('#searchInput').val().toLowerCase();
+
+                $('.service-item').each(function() {
+                    var serviceName = $(this).find('h4').text().toLowerCase();
+                    if (serviceName.includes(searchTerm)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+
+            // Optionally, you can add a listener to filter as the user types
+            $('#searchInput').on('keyup', function() {
+                var searchTerm = $(this).val().toLowerCase();
+
+                $('.service-item').each(function() {
+                    var serviceName = $(this).find('h4').text().toLowerCase();
+                    if (serviceName.includes(searchTerm)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
 
 
 </body>
