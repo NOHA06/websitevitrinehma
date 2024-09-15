@@ -34,8 +34,21 @@
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <style>
+        .section-content {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+     <!-- Spinner Start -->
+     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow nohatc" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -89,20 +102,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link ">Accueil</a>
-                <a href="service.html" class="nav-item nav-link">Services et Spécialités</a>
+                <a href="index.html" class="nav-item nav-link">Accueil</a>
+                <a href="service.html" class="nav-item nav-link ">Services et Spécialités</a>
                 <a href="feature.html" class="nav-item nav-link">Tarifications</a>
-                <a href="Prestation2.html" class="nav-item nav-link">Prestation</a>
-                <a href="parcour.html" class="nav-item nav-link active">Circuit du patient</a>
+                <a href="Prestation2.html" class="nav-item nav-link active">Prestation</a>
+                <a href="parcour.html" class="nav-item nav-link">Circuit du patient</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
         </div>
     </nav>
     <!-- Navbar End -->
 <br>
-
-
-<br>
+    <!-- Navbar End -->
+    <br>
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -115,151 +127,126 @@
 <br>
 
 <style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .text-center {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .section-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-bottom: 40px;
-        font-family: Arial, sans-serif;
+        padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        animation: fadeIn 1.5s forwards ease-in-out;
+        transition: transform 0.3s ease;
     }
 
-    th, td {
-        padding: 12px 15px;
-        text-align: left;
-        border: 1px solid #ddd;
-        background-color: #f9f9f9;
-        transition: background-color 0.3s ease;
+    .section-content:hover {
+        transform: scale(1.02);
     }
 
-    th {
-        background-color: #4CAF50;
-        color: white;
+    .section-content img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 20px;
     }
 
-    tr:nth-child(even) td {
-        background-color: #f2f2f2;
+    .section-content h3 {
+        margin-bottom: 10px;
+        color: #2E8B57;
     }
 
-    tr:hover td {
-        background-color: #f1f1f1;
+    .section-content p {
+        margin-bottom: 0;
+        font-size: 16px;
+        color: #333;
     }
 
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Animation au survol */
-    td {
-        transition: transform 0.2s ease;
-    }
-
-    td:hover {
-        transform: scale(1.05);
+    .section-text {
+        flex: 1;
     }
 </style>
 
+<!-- Section Prestation -->
+<div class="container mt-5">
+    <h2 class="text-center">Prestations de l'HMA</h2>
 
-<h2>Processus Médicaux et Pièces à Apporter</h2>
+    <div id="consultation" class="section-content">
+        <img src="/img/consultation.jpg" alt="Consultation image">
+        <div class="section-text">
+            <h3>Consultation</h3>
+            <p>Le service de consultation de l'HMA vous accueille avec un personnel qualifié pour vos besoins médicaux. Prenez rendez-vous pour une consultation avec nos spécialistes dans diverses disciplines médicales.</p>
+        </div>
+        <div class="section-btn">
+            <a href="parcour.html#consultation-process" class="btn-process">Voir le processus</a>
+        </div>
+    </div>
 
-<table>
-<tr>
-    <th>Service</th>
-    <th>Étape 1</th>
-    <th>Étape 2</th>
-    <th>Étape 3</th>
-    <th>Étape 4</th>
-    <th>Pièces à Apporter</th>
-</tr>
-<tr>
-    <td>Consultation</td>
-    <td>Se rendre au service d'accueil</td>
-    <td>Payer les frais de consultation</td>
-    <td>Obtenir le ticket de consultation</td>
-    <td>Attendre votre tour</td>
-    <td>Carte d'identité, Carte d'assurance</td>
-</tr>
-<tr>
-    <td>Examen de Laboratoire</td>
-    <td>Présenter la demande d'examen</td>
-    <td>Payer les frais de laboratoire</td>
-    <td>Effectuer les prélèvements</td>
-    <td>Attendre les résultats</td>
-    <td>Ordonnance, Carte d'identité</td>
-</tr>
-<tr>
-    <td>Examen Radiologique</td>
-    <td>Présenter l'ordonnance</td>
-    <td>Payer les frais de radiologie</td>
-    <td>Obtenir le bon de la PEC</td>
-    <td>Réaliser l'examen</td>
-    <td>Ordonnance, Carte d'identité</td>
-</tr>
-<tr>
-    <td>Hospitalisation</td>
-    <td>Se rendre au bureau des admissions</td>
-    <td>Payer les frais d'hospitalisation</td>
-    <td>Obtenir une chambre</td>
-    <td>Recevoir les soins nécessaires</td>
-    <td>Carte d'identité, Carte d'assurance, Lettre d'admission</td>
-</tr>
-<tr>
-    <td>Intervention Chirurgicale</td>
-    <td>Présenter l'ordonnance du chirurgien</td>
-    <td>Payer les frais de chirurgie</td>
-    <td>Signer les documents préopératoires</td>
-    <td>Préparer pour l'opération</td>
-    <td>Carte d'identité, Carte d'assurance, Ordonnance</td>
-</tr>
-<tr>
-    <td>Exploration Médicale</td>
-    <td>Se rendre au service approprié</td>
-    <td>Présenter la demande d'exploration</td>
-    <td>Payer les frais d'exploration</td>
-    <td>Effectuer l'exploration</td>
-    <td>Ordonnance, Carte d'identité</td>
-</tr>
-</table>
+    <div id="laboratoire" class="section-content">
+        <img src="/img/laboratoiree.jpg" alt="Laboratoire image">
+        <div class="section-text">
+            <h3>Examen Laboratoire</h3>
+            <p>Notre laboratoire effectue une large gamme d'analyses et d'examens médicaux pour vous fournir des résultats précis et rapides.</p>
+        </div>
+        <div class="section-btn">
+            <a href="parcour.html#laboratoire-process" class="btn-process">Voir le processus</a>
+        </div>
+    </div>
 
+    <div id="radiologie" class="section-content">
+        <img src="/img/radioo.jpg" alt="Radiologie image">
+        <div class="section-text">
+            <h3>Examen Radiologie</h3>
+            <p>Le service de radiologie propose des examens d'imagerie médicale de haute qualité pour un diagnostic fiable.</p>
+        </div>
+        <div class="section-btn">
+            <a href="parcour.html#radiologie-process" class="btn-process">Voir le processus</a>
+        </div>
+    </div>
 
+    <div id="hospitalisation" class="section-content">
+        <img src="/img/hospi.jpg" alt="Hospitalisation image">
+        <div class="section-text">
+            <h3>Hospitalisation</h3>
+            <p>Notre service d'hospitalisation vous offre des soins intensifs et des traitements adaptés à vos besoins médicaux.</p>
+        </div>
+        <div class="section-btn">
+            <a href="parcour.html#hospitalisation-process" class="btn-process">Voir le processus</a>
+        </div>
+    </div>
 
+    <div id="chirurgie" class="section-content">
+        <img src="/img/chir.jpg" alt="Chirurgie image">
+        <div class="section-text">
+            <h3>Intervention Chirurgicale</h3>
+            <p>Nous effectuons une variété d'interventions chirurgicales avec des équipements modernes et une équipe médicale hautement qualifiée.</p>
+        </div>
+        <div class="section-btn">
+            <a href="parcour.html#chirurgie-process" class="btn-process">Voir le processus</a>
+        </div>
+    </div>
 
-
-   <!-- Footer Start -->
-   <div class="container-fluid bg-light text-dark mt-5 pt-5">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-4 col-md-6">
-                <h5 class="mb-4">Contactez-Nous</h5>
-                <p class="mb-4"><i class="fa fa-map-marker-alt me-3"></i> +225 Abidjan Côte d'Ivoire</p>
-                <p class="mb-4"><i class="fa fa-phone-alt me-3"></i> +225 07 58 07 53 26</p>
-                <p><i class="fa fa-envelope me-3"></i> contact@hma.ci</p>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <h5 class="mb-4">Liens Utiles</h5>
-                <a class="btn btn-link" href="#">Home</a>
-                <a class="btn btn-link" href="#">Service</a>
-                <a class="btn btn-link" href="#">Tarifications</a>
-                <a class="btn btn-link" href="#">Assurances</a>
-                <a class="btn btn-link" href="#">Parcourt</a>
-                <a class="btn btn-link" href="#">Contact</a>
-            </div>
+    <div id="exploration" class="section-content">
+        <img src="/img/exploration.jpg" alt="Exploration image">
+        <div class="section-text">
+            <h3>Exploration</h3>
+            <p>Les explorations médicales sont disponibles pour vous fournir un diagnostic détaillé et personnalisé.</p>
+        </div>
+        <div class="section-btn">
+            <a href="parcour.html#exploration-process" class="btn-process">Voir le processus</a>
         </div>
     </div>
 </div>
-<!-- Footer -->
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg nohabtn btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+<!-- Section Prestation End -->
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -267,18 +254,13 @@
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-     <script src="js/main.js"></script>
-     <script src="sections.js"></script>
-   
-     <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=336b767c2ad92' async='true'></script>
-    
+    <script src="js/main.js"></script>
 </body>
 
 </html>

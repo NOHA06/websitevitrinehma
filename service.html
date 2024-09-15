@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Klinik - Clinic Website Template</title>
+    <title>HMA - Hopital Militaire D'Abidjan</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -30,20 +30,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
+    <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel>.js?id=336b767c2ad92' async='true'></script>
 </head>
-<style>.ouvert {
-    background-color: #00a043; /* Couleur de fond rouge */
-    color: #fff; /* Couleur du texte blanc */
-    text-align: center;
-    padding: 10px 20px;
-    border-radius: 10px; /* Bordures arrondies */
-    font-size: 1.5em; /* Taille du texte */
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
-    display: inline-block; /* Permet d'ajuster la taille du conteneur au texte */
-    margin-top: 20px;
-}</style>
+
 <body>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -53,17 +42,20 @@
     </div>
     <!-- Spinner End -->
 
+
+   
     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt nohatc me-2"></small>
-                    <small>+225 Abidjan Côte d'Ivoire</small>
+                    
+                    <a href="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"><small class="fa fa-map-marker-alt nohatc me-2"></small></a>
+                    <small> Route du Zoo, Abidjan ,cote d'ivoire</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3">
                     <small class="far fa-clock nohatc me-2"></small>
-                    <small>Lundi - Dimanche : 24h/24</small>
+                    <small>lundi- dimache : 24h/24</small>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
@@ -72,35 +64,42 @@
                     <small>+225 07 58 07 53 26</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href="https://www.facebook.com/profile.php?id=61557155165989&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                   
+                <!-- pase encore disponible
+                   <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                   <a class="btn btn-sm-square rounded-circle bg-white nohatc me-0" href=""><i class="fab fa-instagram"></i></a>
+                  -->  
                 </div>
             </div>
         </div>
     </div>
     <!-- Topbar End -->
-
-    <!-- Navbar Start --> <br>
-
+<br>
+    <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
            
             <h1 class="m-0 nohatc"><img src="./img/HMA1.png" alt="" srcset="" class="img-thumbnail" style="width: 201px; height: 76px;"></h1>
         </a>
+
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="service.html" class="nav-item nav-link active">Service</a>
+                <a href="index.html" class="nav-item nav-link">Accueil</a>
+                <a href="service.html" class="nav-item nav-link active">Services et Spécialités</a>
                 <a href="feature.html" class="nav-item nav-link">Tarifications</a>
-                <a href="team.html" class="nav-item nav-link">Assurances</a>
-                <a href="parcour.html" class="nav-item nav-link">Parcours</a>
+                <a href="Prestation2.html" class="nav-item nav-link">Prestation</a>
+                <a href="parcour.html" class="nav-item nav-link">Circuit du patient</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
         </div>
     </nav>
-    <!-- Navbar End --> <br>
+    <!-- Navbar End -->
+<br>
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -155,265 +154,212 @@
 
                 
                         <!-- Services Start -->
-                        <div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                                <img src="./img/services/urgence.jpg" alt="Urgence medicale" class="img-fluid mx-auto d-block mb-3">
-                                <h4 class="ouvert">Ouvert : 7/7 , 24/24</h4>
-                                <br>
-                                <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalLabelurgences">
-                                    <i class="fa fa-plus nohatc me-3"></i> Voir Plus
-                                </a>
-                            </div>
-                        </div>
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/aids.jpeg" alt="AIDS" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">sida vih</h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalaids">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
 
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/cardio.jpeg" alt="Cardiologie" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">cardiologie </h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalLabelcardio">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
 
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/cardio.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalLabelcardio">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/gyneco.jpg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalLabelgynécologie-obstétrique">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/labo.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/chirurgie.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/endocrino.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/dent.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/PEDIATRIE.jpg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/orl.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/derma.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                      
-                          <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/mpr.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/psy.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/psy.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/oph.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/rea.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/nephro-dialyse.jpg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/aids.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/pharma.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/radio.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/chirurgie.jpeg" alt="Chirurgie" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">chirurgie traumatologique orthopedique </h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
 
 
 
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/endoscopie.jpg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/derma.jpeg" alt="Dermatologie" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">dermatologie </h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalderma">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
 
 
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
-                        <img src="./img/services/viscerale.jpeg" alt="Dentisterie" class="img-fluid mx-auto d-block mb-3">
-                        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
-                        <br>
-                        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalchirurgie">
-                            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
-                    </div>
-                </div>
 
 
-<!-- Modal Urgence-->
+
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/dent.jpeg" alt="Dermatologie" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">cabinet dentaire  </h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalderma">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
+
+
+
+
+
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/endocrino.jpeg" alt="Endocrinologie" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">endocrino diabeto</h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalendocrino">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/gyneco.jpg" alt="Gynécologie" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">gynecologie obstetrique </h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalgynécologie">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/labo.jpeg" alt="Laboratoire" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">laboratoire </h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModallabo">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/mpr.jpeg" alt="MPR" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">mpr kinésie thérapie</h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalmpr">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/nephro-dialyse.jpg" alt="Néphrologie" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">nephrologie dialyse </h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalnephro">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/oph.jpeg" alt="Ophtalmologie" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">ophtalmologie</h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModaloph">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/orl.jpeg" alt="ORL" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">orl</h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalorl">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/psy.jpeg" alt="Psychiatrie" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">psychiatrie</h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalpsych">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/radio.jpeg" alt="Radiologie" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">radiologie</h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalradiologie">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div>
+
+ <div class="col-lg-4 col-md-6 service-item wow fadeInUp" data-wow-delay="0.1s">
+    <div class="service-item bg-light rounded h-100 p-5 d-flex flex-column">
+        <img src="./img/services/urgence.jpg" alt="urgence" class="img-fluid mx-auto d-block mb-3">
+        <h5 style="display: none;">urgences</h5>
+        <h4 class="ouvert">Ouvert : lundi au vend ,8H a 16h30</h4> 
+        <br>
+        <a class="btn mt-auto" href="#" data-bs-toggle="modal" data-bs-target="#readMoreModalsante">
+            <i class="fa fa-plus nohatc me-3"></i>Voir Plus </a>
+    </div>
+</div> 
+<!-- Services End -->
+
+
+
+<!-- Modal Urgence -->
 <div class="modal fade" id="readMoreModalLabelcardio" tabindex="-1" aria-labelledby="readMoreModalLabelcardio" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="readMoreModalLabelcardio">Le Service de cardiologie de l'HMA</h5>
+                <h5 class="modal-title" id="readMoreModalLabelcardio">Le Service de Cardiologie de l'HMA</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               
-                <p><strong>Batiment B</strong> </p>
+                <p><strong>Bâtiment B</strong></p>
 
                 <p><strong>Personnel médical</strong> :</p>
                 <div class="row">
                     <div class="col-6 col-md-4 text-center">
                         <div class="card">
                             <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Ahoua">
-                            <p> Dr. Ahoua , medecin,colonel ,cardiologue</p>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 text-center">
-                        <div class="card">
-                            <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Yao">
-                            <p> Dr. Yao , medecin,major ,cardiologue assistant</p>
+                            <p>Dr. Ahoua, Médecin, Colonel, Cardiologue</p>
                         </div>
                     </div>
                     <div class="col-6 col-md-4 text-center">
                         <div class="card">
                             <img src="/img/idfe.jpg" class="card-img-top" alt="Dr. Kouadio">
-                            <p> Dr. Kouadio , medecin,cardiologue infirmier</p>
+                            <p>Dr. Kouadio, Médecin, Cardiologue Infirmier</p>
                         </div>
                     </div>
                 </div>
-   <br> <br> <br>
-                   <div class="row">
-                    <div class="col-6 col-md-4 text-center">
-                        <div class="card">
-                            <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Ahoua">
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 text-center">
-                        <div class="card">
-                            <img src="/img/iddrlaugh.jpg" class="card-img-top" alt="Dr. Yao">
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 text-center">
-                        <div class="card">
-                            <img src="/img/idfe.jpg" class="card-img-top" alt="Dr. Kouadio">
-                        </div>
-                    </div>
-                </div>
+                <br>
 
                 <p><strong>Jours de présence des médecins</strong> :</p>
                 <ul>
@@ -423,14 +369,51 @@
                     <li>Dr. Konan : Mercredi, Vendredi</li>
                     <li>Dr. Ngoran : Jeudi, Samedi</li>
                 </ul>
-            </div>
+                
+                <hr>
+                
+                <p><strong>Spécialités</strong> :</p>
+                <ul>
+                    <li>Cardiologie générale</li>
+                    <li>Rééducation cardiaque</li>
+                    <li>Chirurgie cardiaque</li>
+                    <li>Consultation pour hypertension artérielle</li>
+                    <li>Soins d'urgence cardiaque</li>
+                </ul>
 
+                <hr>
+                
+                <p><strong>Services et Examens Disponibles</strong> :</p>
+                <ul>
+                    <li>Échocardiographie Doppler</li>
+                    <li>Électrocardiogramme (ECG)</li>
+                    <li>Test d'effort</li>
+                    <li>Holter de tension artérielle</li>
+                    <li>Coronarographie</li>
+                </ul>
+
+                <hr>
+                
+                <p><strong>Tarifs des Examens</strong> :</p>
+                <ul>
+                    <li>Échocardiographie Doppler : 40 000 FCFA</li>
+                    <li>Électrocardiogramme (ECG) : 20 000 FCFA</li>
+                    <li>Test d'effort : 35 000 FCFA</li>
+                    <li>Holter de tension artérielle : 50 000 FCFA</li>
+                    <li>Coronarographie : 150 000 FCFA</li>
+                </ul>
+            </div>
+            <button class="btn-search">
+                <a href="/feature.html">Rechercher le prix d'un examen</a>
+            </button>
+            
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
             </div>
         </div>
     </div>
 </div>
+
 
   
 
@@ -571,6 +554,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="sections.js"></script>
+
 
 
     <script>
@@ -579,7 +564,7 @@
                 var searchTerm = $('#searchInput').val().toLowerCase();
 
                 $('.service-item').each(function() {
-                    var serviceName = $(this).find('h4').text().toLowerCase();
+                    var serviceName = $(this).find('h5').text().toLowerCase();
                     if (serviceName.includes(searchTerm)) {
                         $(this).show();
                     } else {
@@ -593,7 +578,7 @@
                 var searchTerm = $(this).val().toLowerCase();
 
                 $('.service-item').each(function() {
-                    var serviceName = $(this).find('h4').text().toLowerCase();
+                    var serviceName = $(this).find('h5').text().toLowerCase();
                     if (serviceName.includes(searchTerm)) {
                         $(this).show();
                     } else {

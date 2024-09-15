@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HMA - Hôpital Militaire D'Abidjan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .page-header {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            margin-bottom: 30px;
+            color: #343a40;
+        }
+
+        .parcours {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .parcours-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .parcours-item h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .parcours-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .parcours-item ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            color: #343a40;
+        }
+
+        .parcours-item ul li:last-child {
+            border-bottom: none;
+        }
+
+        .buildings {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .building-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .building-item h2 {
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        .building-item p {
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+    </style>
+</head>
+
+<body>
+    
+     <!-- Spinner Start -->
+     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow nohatc" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+   
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    
+                    <a href="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"><small class="fa fa-map-marker-alt nohatc me-2"></small></a>
+                    <small  style="color: #333;"> Route du Zoo, Abidjan ,cote d'ivoire</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock nohatc me-2"></small>
+                    <small style="color: #333;">lundi- dimache : 24h/24</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt nohatc me-2"></small>
+                    <small  style="color: #333;">+225 07 58 07 53 26</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href="https://www.facebook.com/profile.php?id=61557155165989&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                   
+                <!-- pase encore disponible
+                   <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                   <a class="btn btn-sm-square rounded-circle bg-white nohatc me-0" href=""><i class="fab fa-instagram"></i></a>
+                  -->  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+<br>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
+           
+            <h1 class="m-0 nohatc"><img src="./img/HMA1.png" alt="" srcset="" class="img-thumbnail" style="width: 201px; height: 76px;"></h1>
+        </a>
+
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Accueil</a>
+                <a href="service.html" class="nav-item nav-link ">Services et Spécialités</a>
+                <a href="feature.html" class="nav-item nav-link">Tarifications</a>
+                <a href="Prestation2.html" class="nav-item nav-link">Prestation</a>
+                <a href="parcour.html" class="nav-item nav-link active">Circuit du patient</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+<br>
+
+    <!-- Page Header Start -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-3 text-dark mb-3">Quel parcourt suivre ?</h1>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+            font-size: 2rem;
+        }
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        table:hover {
+            transform: scale(1.02);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            font-size: 1rem;
+        }
+        th {
+            background-color: #007bff;
+            color: rgb(255, 255, 255);
+        }
+        td {
+            background-color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        td:hover {
+            background-color: #e0f7fa;
+            transition: background-color 0.3s;
+        }
+        .container-fluid {
+            background-color: #a9e5fd;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .container .col-lg-4 {
+            flex: 1;
+            margin: 10px;
+            min-width: 250px;
+        }
+        h5 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        p, a {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            margin: 5px 0;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+<h2>Processus Médicaux et Pièces à Apporter</h2>
+
+<table>
+    <tr>
+        <th>Service</th>
+        <th>Étape 1</th>
+        <th>Étape 2</th>
+        <th>Étape 3</th>
+        <th>Étape 4</th>
+        <th>Pièces à Apporter</th>
+    </tr>
+    <tr>
+        <td>Consultation</td>
+        <td>Se rendre au service d'accueil</td>
+        <td>Payer les frais de consultation</td>
+        <td>Obtenir le ticket de consultation</td>
+        <td>Attendre votre tour</td>
+        <td>Carte d'identité, Carte d'assurance</td>
+    </tr>
+    <tr>
+        <td>Examen de Laboratoire</td>
+        <td>Présenter la demande d'examen</td>
+        <td>Payer les frais de laboratoire</td>
+        <td>Effectuer les prélèvements</td>
+        <td>Attendre les résultats</td>
+        <td>Ordonnance, Carte d'identité</td>
+    </tr>
+    <tr>
+        <td>Examen Radiologique</td>
+        <td>Présenter l'ordonnance</td>
+        <td>Payer les frais de radiologie</td>
+        <td>Obtenir le bon de la PEC</td>
+        <td>Réaliser l'examen</td>
+        <td>Ordonnance, Carte d'identité</td>
+    </tr>
+    <tr>
+        <td>Hospitalisation</td>
+        <td>Se rendre au bureau des admissions</td>
+        <td>Payer les frais d'hospitalisation</td>
+        <td>Obtenir une chambre</td>
+        <td>Recevoir les soins nécessaires</td>
+        <td>Carte d'identité, Carte d'assurance, Lettre d'admission</td>
+    </tr>
+    <tr>
+        <td>Intervention Chirurgicale</td>
+        <td>Présenter l'ordonnance du chirurgien</td>
+        <td>Payer les frais de chirurgie</td>
+        <td>Signer les documents préopératoires</td>
+        <td>Préparer pour l'opération</td>
+        <td>Carte d'identité, Carte d'assurance, Ordonnance</td>
+    </tr>
+    <tr>
+        <td>Exploration Médicale</td>
+        <td>Se rendre au service approprié</td>
+        <td>Présenter la demande d'exploration</td>
+        <td>Payer les frais d'exploration</td>
+        <td>Effectuer l'exploration</td>
+        <td>Ordonnance, Carte d'identité</td>
+    </tr>
+</table>
+
+
+ <br><br><br>
+<!-- Footer Start -->
+<div class="container-fluid">
+    <div class="container">
+        <div class="col-lg-4">
+            <h5>Contactez-Nous</h5>
+            <p><i class="fas fa-map-marker-alt me-3"></i> Abidjan, Côte d'Ivoire</p>
+            <p><i class="fas fa-phone-alt me-3"></i> +225 07 58 07 53 26</p>
+            <p><i class="fas fa-envelope me-3"></i> contact@hma.ci</p>
+        </div>
+        <div class="col-lg-4">
+            <h5>Liens Utiles</h5>
+            <a class="btn" href="#">Home</a>
+            <a class="btn" href="#">Service</a>
+            <a class="btn" href="#">Tarifications</a>
+            <a class="btn" href="#">Assurances</a>
+            <a class="btn" href="#">Parcours</a>
+            <a class="btn" href="#">Contact</a>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<script>
+    // Simple animation on button hover (optional JavaScript functionality)
+    document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('mouseover', function() {
+            button.style.transform = 'translateY(-5px)';
+        });
+        button.addEventListener('mouseout', function() {
+            button.style.transform = 'translateY(0px)';
+        });
+    });
+</script>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg nohabtn btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="sections.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

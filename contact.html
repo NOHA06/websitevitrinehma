@@ -117,59 +117,72 @@
         }
     </style>
 
-   <!-- Topbar Start -->
-   <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
-    <div class="row gx-0 d-none d-lg-flex">
-        <div class="col-lg-7 px-5 text-start">
-            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                <small class="fa fa-map-marker-alt nohatc me-2"></small>
-                <small>+225 Abidjan cote d'ivoire</small>
-            </div>
-            <div class="h-100 d-inline-flex align-items-center py-3">
-                <small class="far fa-clock nohatc me-2"></small>
-                <small>lundi- dimache : 24h/24</small>
-            </div>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow nohatc" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
-        <div class="col-lg-5 px-5 text-end">
-            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                <small class="fa fa-phone-alt nohatc me-2"></small>
-                <small>+225 07 58 07 53 26</small>
+    </div>
+    <!-- Spinner End -->
+
+
+   
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    
+                    <a href="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"><small class="fa fa-map-marker-alt nohatc me-2"></small></a>
+                    <small> Route du Zoo, Abidjan ,cote d'ivoire</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock nohatc me-2"></small>
+                    <small>lundi- dimache : 24h/24</small>
+                </div>
             </div>
-            <div class="h-100 d-inline-flex align-items-center">
-                <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href="https://www.facebook.com/profile.php?id=61557155165989&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-               
-            <!-- pase encore disponible
-               <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-               <a class="btn btn-sm-square rounded-circle bg-white nohatc me-0" href=""><i class="fab fa-instagram"></i></a>
-              -->  
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt nohatc me-2"></small>
+                    <small>+225 07 58 07 53 26</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href="https://www.facebook.com/profile.php?id=61557155165989&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                   
+                <!-- pase encore disponible
+                   <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white nohatc me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                   <a class="btn btn-sm-square rounded-circle bg-white nohatc me-0" href=""><i class="fab fa-instagram"></i></a>
+                  -->  
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Topbar End -->
-
-    <!-- Navbar Start --> <br>
+    <!-- Topbar End -->
+<br>
+    <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
            
             <h1 class="m-0 nohatc"><img src="./img/HMA1.png" alt="" srcset="" class="img-thumbnail" style="width: 201px; height: 76px;"></h1>
         </a>
+
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link">Accueil</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="service.html" class="nav-item nav-link ">Services et Spécialités</a>
                 <a href="feature.html" class="nav-item nav-link">Tarifications</a>
-                <a href="team.html" class="nav-item nav-link">Assurances</a>
-                <a href="parcour.html" class="nav-item nav-link">Parcours</a>
+                <a href="Prestation2.html" class="nav-item nav-link">Prestation</a>
+                <a href="parcour.html" class="nav-item nav-link">Circuit du patient</a>
                 <a href="contact.html" class="nav-item nav-link active">Contact</a>
             </div>
         </div>
     </nav>
     <!-- Navbar End -->
+<br>
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -311,7 +324,9 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
+    <script src="sections.js"></script>
     <script src="js/main.js"></script>
+
 
     <!-- Google Maps JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
