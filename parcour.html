@@ -112,126 +112,257 @@
         </div>
     </div>
     <!-- Page Header End -->
-<br>
-
-<style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 40px;
-        font-family: Arial, sans-serif;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        animation: fadeIn 1.5s forwards ease-in-out;
-    }
-
-    th, td {
-        padding: 12px 15px;
-        text-align: left;
-        border: 1px solid #ddd;
-        background-color: #f9f9f9;
-        transition: background-color 0.3s ease;
-    }
-
-    th {
-        background-color: #4CAF50;
-        color: white;
-    }
-
-    tr:nth-child(even) td {
-        background-color: #f2f2f2;
-    }
-
-    tr:hover td {
-        background-color: #f1f1f1;
-    }
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Animation au survol */
-    td {
-        transition: transform 0.2s ease;
-    }
-
-    td:hover {
-        transform: scale(1.05);
-    }
-</style>
 
 
-<h2>Processus Médicaux et Pièces à Apporter</h2>
+
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Fond léger pour le corps */
+}
+
+.header {
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    border: 1px solid #4CAF50; /* Bordure verte feuille */
+    margin: 20px auto; /* Centrage avec marges */
+    background-color: #4CAF50; /* Fond vert feuille */
+    color: white; /* Couleur du texte */
+    border-radius: 8px; /* Coins arrondis */
+}
+
+table {
+    width: 80%; /* Largeur du tableau */
+    margin: 20px auto; /* Centrage du tableau */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #4CAF50; /* Bordure verte feuille */
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+th {
+    background-color: #f2f2f2; /* Fond léger pour les en-têtes */
+    font-weight: bold;
+}
+
+.highlight {
+    font-weight: bold;
+    text-align: left;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.documents-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.documents-list div {
+    width: 100%;
+    border-bottom: 1px solid #4CAF50; /* Bordure verte feuille */
+    padding: 5px 0;
+}
+
+.documents-list div:last-child {
+    border-bottom: none;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+    </style>
+<div class="header">
+    Votre état de santé va mal et vous serez vus par un médecin à HMA pour une consultation.<br>
+    <span class="underline">Vous devez obtenir un document médical (ordonnance médicale).</span>
+</div>
 
 <table>
-<tr>
-    <th>Service</th>
-    <th>Étape 1</th>
-    <th>Étape 2</th>
-    <th>Étape 3</th>
-    <th>Étape 4</th>
-    <th>Pièces à Apporter</th>
-</tr>
-<tr>
-    <td>Consultation</td>
-    <td>Se rendre au service d'accueil</td>
-    <td>Payer les frais de consultation</td>
-    <td>Obtenir le ticket de consultation</td>
-    <td>Attendre votre tour</td>
-    <td>Carte d'identité, Carte d'assurance</td>
-</tr>
-<tr>
-    <td>Examen de Laboratoire</td>
-    <td>Présenter la demande d'examen</td>
-    <td>Payer les frais de laboratoire</td>
-    <td>Effectuer les prélèvements</td>
-    <td>Attendre les résultats</td>
-    <td>Ordonnance, Carte d'identité</td>
-</tr>
-<tr>
-    <td>Examen Radiologique</td>
-    <td>Présenter l'ordonnance</td>
-    <td>Payer les frais de radiologie</td>
-    <td>Obtenir le bon de la PEC</td>
-    <td>Réaliser l'examen</td>
-    <td>Ordonnance, Carte d'identité</td>
-</tr>
-<tr>
-    <td>Hospitalisation</td>
-    <td>Se rendre au bureau des admissions</td>
-    <td>Payer les frais d'hospitalisation</td>
-    <td>Obtenir une chambre</td>
-    <td>Recevoir les soins nécessaires</td>
-    <td>Carte d'identité, Carte d'assurance, Lettre d'admission</td>
-</tr>
-<tr>
-    <td>Intervention Chirurgicale</td>
-    <td>Présenter l'ordonnance du chirurgien</td>
-    <td>Payer les frais de chirurgie</td>
-    <td>Signer les documents préopératoires</td>
-    <td>Préparer pour l'opération</td>
-    <td>Carte d'identité, Carte d'assurance, Ordonnance</td>
-</tr>
-<tr>
-    <td>Exploration Médicale</td>
-    <td>Se rendre au service approprié</td>
-    <td>Présenter la demande d'exploration</td>
-    <td>Payer les frais d'exploration</td>
-    <td>Effectuer l'exploration</td>
-    <td>Ordonnance, Carte d'identité</td>
-</tr>
+    <thead>
+        <tr>
+            <th>ÉTAPE</th>
+            <th>ACTION</th>
+            <th>LIEU DE DÉPÔT</th>
+            <th>PERSONNEL TRAITANT</th>
+            <th>DOCUMENTS À FOURNIR</th>
+            <th>DOCUMENTS À OBTENIR</th>
+            <th>OBS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="highlight">1 : PRÉ-INSCRIPTION SUR LA LISTE DE CONSULTATION</td>
+            <td>Se rendre au service de consultation pour sa pré-inscription</td>
+            <td>Accueil Service de Consultation</td>
+            <td>Secrétaire médical</td>
+            <td>
+                <div class="documents-list">
+                  <div>Carte d'identification</div>
+                   
+                </div>
+            </td>
+            <td>
+                <div class="documents-list">
+                  <div>Liste de consultation (pré-inscription)</div>
+                  <div>Fiche de facturation d'actes</div>
+                  <div>Dossier patient</div>
+                   
+                    
+                </div>
+            </td>
+            <td><div>Retrait immédiat (05 minutes)</div></td>
+        </tr>
+        <tr>
+            <td class="highlight">2 : OBTENTION D'UN TICKET DE CONSULTATION</td>
+            <td>Se rendre au Bureau des Entrées pour avoir un ticket</td>
+            <td>Box de paiement des frais</td>
+            <td>Caissière</td>
+            <td>
+                <div class="documents-list">
+                    <div>Carte d'identification</div>
+                    <div>Fiche de facturation d'actes </div>
+                    <div>Argent en Espèce en FCFA (nom assuré)</div>
+                    <div>Bon de PEC FPM ou autre s Assurances Conventionnées (Assuré et Ayant droit) </div>
+                </div>
+            </td>
+            <td>
+                <div class="documents-list">
+                    <div>Ticket de consultation</div>
+                   
+                </div>
+            </td>
+            <td> <div>Retrait immédiat (05 minutes)</div></td>
+        </tr>
+        <tr>
+            <td class="highlight">3 : INSCRIPTION SUR LA LISTE DE CONSULTATION</td>
+            <td>Se rendre au service de consultation pour son inscription</td>
+            <td>Accueil Service de Consultation</td>
+            <td>Secrétaire médical</td>
+            <td>
+                <div class="documents-list">
+                    
+                    <div>Fiche de facturation d'actes</div>
+                    <div>Ticket de Consultation</div>
+                    
+                </div>
+            </td>
+            <td>
+                <div class="documents-list">
+                  <div>Liste de Consultation (inscription)</div>
+                    <div>Dossier patient (mis a jour)</div>
+                   
+                    
+                </div>
+            </td>
+            <td><div>Retrait immédiat (05 minutes)</div></td>
+        </tr>
+        <tr>
+            <td class="highlight">4 : OBTENTION D'UN DOCUMENT MÉDICAL</td>
+            <td>Se rendre au service de consultation pour sa consultation</td>
+            <td>Bureau médecin</td>
+            <td>Médecin Spécialiste</td>
+            <td>
+                <div class="documents-list">
+                    
+                    <div>Liste de consultation</div>
+                    <div>Ticket de consultation</div>
+                    <div>Dossier patient</div>
+                </div>
+            </td>
+            <td>
+                <div class="documents-list">
+                    <div>Document médical (ordonnance medicale) signé </div>
+                  
+                </div>
+            </td>
+            <td>  <div>Retrait immédiat (15 minutes)</div></td>
+        </tr>
+    </tbody>
+</table>
+<br> <br>
+
+
+
+<div class="header">
+    Votre médecin à HMA vient de vous consulter et vous a remis un bulletin d'analyses biologiques.<br>
+    <span class="underline">Vous devez obtenir un BON de Prise En Charge FPM.</span>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>ETAPE</th>
+            <th>ACTION</th>
+            <th>LIEU DE DEPOT</th>
+            <th>PERSONNEL TRAITANT</th>
+            <th>PIÈCES À FOURNIR</th>
+            <th>DOCUMENTS À OBTENIR</th>
+            <th>OBS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="highlight">1: RETRAIT D'UN BON DE PRISE EN CHARGE VIERGE FPM</td>
+            <td>Se rendre au Bureau FPM</td>
+            <td>Bureau FPM</td>
+            <td>Agent BONS de PEC FPM</td>
+            <td><div class="documents-list">
+                    
+                <div>Carte assuré FPM</div>
+                <div>bulletin d'analyses biologiques</div>
+            </div>
+            </div>
+              
+            <td>BONS Vierge de PEC FPM</td>
+            <td>Retrait immédiat (05 Minutes)</td>
+        </tr>
+        <tr>
+            <td class="highlight">2: TRAITEMENT D'UN BON DE PRISE EN CHARGE VIERGE FPM</td>
+            <td>Se rendre au service de consultation</td>
+            <td>Accueil Service de Consultation</td>
+            <td>Secrétaire médical</td>
+            <td> <div class="documents-list">
+                    
+                <div>Bon Vierge de PEC FPM</div>
+                <div>bulletin d'analyses biologiques</div>
+                <div>photocopie CIM (en activité)</div>
+                <div> photocopie carte assuré FPM</div>
+            </div>
+            </td>
+            <td>BON Rempli de PEC FPM</td>
+            <td>Retrait immédiat (05 Minutes)</td>
+        </tr>
+        <tr>
+            <td class="highlight">3: SIGNATURE D'UN BON DE PRISE EN CHARGE REMPLI FPM</td>
+            <td>Se rendre au Bureau FPM</td>
+            <td>Bureau FPM</td>
+            <td>Médecin Conseil FPM</td>
+            <td><div class="documents-list">
+                    
+                <div>Bon Rempli de PEC FPM</div>
+                <div>bulletin d'analyses biologiques</div>
+                <div>photocopie CIM (en activité)</div>
+                <div>photocopie carte assuré FPM</div>
+            </div>
+            </div>
+            </td>
+            <td>Bon Rempli et signé de PEC FPM</td>
+            <td>Retrait immédiat (15 Minutes)</td>
+        </tr>
+    </tbody>
 </table>
 
 
-
-
+<br>
 
    <!-- Footer Start -->
    <div class="container-fluid bg-light text-dark mt-5 pt-5">
@@ -272,7 +403,7 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+    
     <!-- Template Javascript -->
      <script src="js/main.js"></script>
      <script src="sections.js"></script>

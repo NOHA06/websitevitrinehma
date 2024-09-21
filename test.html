@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau HMA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+
+        .small-text {
+            font-size: 12px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .documents-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .documents-list div {
+            width: 100%;
+            border-bottom: 1px solid black;
+            padding: 5px 0;
+        }
+
+        .documents-list div:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    Votre état de santé va mal et vous serez vus par un médecin à HMA pour une consultation.<br>
+    <span class="underline">Vous devez obtenir un document médical (ordonnance médicale).</span>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>ÉTAPE</th>
+            <th>ACTION</th>
+            <th>LIEU DE DÉPÔT</th>
+            <th>PERSONNEL TRAITANT</th>
+            <th>DOCUMENTS À FOURNIR</th>
+            <th>DOCUMENTS À OBTENIR</th>
+            <th>OBS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="highlight">1 : PRÉ-INSCRIPTION SUR LA LISTE DE CONSULTATION</td>
+            <td>Se rendre au service de consultation pour sa pré-inscription</td>
+            <td>Accueil Service de Consultation</td>
+            <td>Secrétaire médical</td>
+            <td>
+                <div class="documents-list">
+                  <div>Carte d'identification</div>
+                   
+                </div>
+            </td>
+            <td>
+                <div class="documents-list">
+                  <div>Liste de consultation (pré-inscription)</div>
+                  <div>Fiche de facturation d'actes</div>
+                  <div>Dossier patient</div>
+                   
+                    
+                </div>
+            </td>
+            <td><div>Retrait immédiat (05 minutes)</div></td>
+        </tr>
+        <tr>
+            <td class="highlight">2 : OBTENTION D'UN TICKET DE CONSULTATION</td>
+            <td>Se rendre au Bureau des Entrées pour avoir un ticket</td>
+            <td>Box de paiement des frais</td>
+            <td>Caissière</td>
+            <td>
+                <div class="documents-list">
+                    <div>Carte d'identification</div>
+                    <div>Fiche de facturation d'actes </div>
+                    <div>Argent en Espèce en FCFA (nom assuré)</div>
+                    <div>Bon de PEC FPM ou autre s Assurances Conventionnées (Assuré et Ayant droit) </div>
+                </div>
+            </td>
+            <td>
+                <div class="documents-list">
+                    <div>Ticket de consultation</div>
+                   
+                </div>
+            </td>
+            <td> <div>Retrait immédiat (05 minutes)</div></td>
+        </tr>
+        <tr>
+            <td class="highlight">3 : INSCRIPTION SUR LA LISTE DE CONSULTATION</td>
+            <td>Se rendre au service de consultation pour son inscription</td>
+            <td>Accueil Service de Consultation</td>
+            <td>Secrétaire médical</td>
+            <td>
+                <div class="documents-list">
+                    
+                    <div>Fiche de facturation d'actes</div>
+                    <div>Ticket de Consultation</div>
+                    
+                </div>
+            </td>
+            <td>
+                <div class="documents-list">
+                  <div>Liste de Consultation (inscription)</div>
+                    <div>Dossier patient (mis a jour)</div>
+                   
+                    
+                </div>
+            </td>
+            <td><div>Retrait immédiat (05 minutes)</div></td>
+        </tr>
+        <tr>
+            <td class="highlight">4 : OBTENTION D'UN DOCUMENT MÉDICAL</td>
+            <td>Se rendre au service de consultation pour sa consultation</td>
+            <td>Bureau médecin</td>
+            <td>Médecin Spécialiste</td>
+            <td>
+                <div class="documents-list">
+                    
+                    <div>Liste de consultation</div>
+                    <div>Ticket de consultation</div>
+                    <div>Dossier patient</div>
+                </div>
+            </td>
+            <td>
+                <div class="documents-list">
+                    <div>Document médical (ordonnance medicale) signé </div>
+                  
+                </div>
+            </td>
+            <td>  <div>Retrait immédiat (15 minutes)</div></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
