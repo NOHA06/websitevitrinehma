@@ -2,5 +2,9 @@
 *.jpg
 *.png
 
+# Ne pas ignorer les fichiers dans img/last/
+!img/last/*.jpg
+!img/last/*.png
+
 # Ignorer les dossiers spécifiques
 /img/assurances
